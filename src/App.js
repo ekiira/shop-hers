@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header/Header';
+import SideNav from './Side-Nav/SideNav';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-     Shopers
-     
+      <SideNav />
+     <Header />
+
     </div>
   );
 }
