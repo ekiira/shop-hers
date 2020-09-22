@@ -33,16 +33,19 @@ import {
   IconButton,
   Drawer,
   MenuList,
-  InputBase
-
+  InputBase,
+  Badge
 
  } from '@material-ui/core';
-import { Menu, Search } from '@material-ui/icons';
+import { Menu, Search,  AccountCircle, ShoppingCartOutlined} from '@material-ui/icons';
 import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
+      flexGrow: 1,
+    },
+    grow: {
       flexGrow: 1,
     },
     menuButton: {
@@ -128,6 +131,49 @@ const toggleDrawer = () => {
 
           </Typography>
        
+          <div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <Search />
+            </div>
+            <InputBase
+              placeholder="Search…"
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </div>
+          <div className={classes.grow} />
+          <div>
+<IconButton
+edge="end"
+aria-label="account of current user"
+// aria-controls={menuId}
+aria-haspopup="true"
+// onClick={handleProfileMenuOpen}
+color="inherit"
+>
+<AccountCircle />
+</IconButton>
+            
+            <IconButton aria-label="show 17 items in cart" color="inherit">
+              <Badge badgeContent={17} color="secondary">
+                <ShoppingCartOutlined />
+              </Badge>
+            </IconButton>
+            <IconButton
+              edge="end"
+              aria-label="account of current user"
+              // aria-controls={menuId}
+              aria-haspopup="true"
+              // onClick={handleProfileMenuOpen}
+              color="inherit"
+            >
+
+            </IconButton>
+          </div>
+        
         </Toolbar>
       </AppBar>
 
@@ -163,3 +209,4 @@ const toggleDrawer = () => {
 };
 
 export default NavigationBar;
+
