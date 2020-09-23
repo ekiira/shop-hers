@@ -1,3 +1,11 @@
 .MuiSvgIcon-root {
   font-size: 2.5rem !important;
 }
+
+.currency {
+  background-color: white ;
+  border: none;
+  border-radius: 5px;
+  width: 50px;
+    height: 30px;
+} 
