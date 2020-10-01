@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { createStyles, makeStyles, Theme, fade } from '@material-ui/core/styles';
+import { createStyles, makeStyles, fade } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import {
   AppBar,
   Toolbar,
   Typography,
   IconButton,
-InputLabel,
+  InputLabel,
   InputBase,
   Badge,
- TextField
+  TextField
  } from '@material-ui/core';
-import { Menu, AccountCircle, ShoppingCartOutlined, More} from '@material-ui/icons';
+import { Menu, AccountCircle, ShoppingCartOutlined } from '@material-ui/icons';
 
 import './Header.css'
 
@@ -28,8 +28,7 @@ const useStyles = makeStyles((theme) =>
     },
     title: {
       flexGrow: 1,
-      textAlign: 'center',
-      paddingTop: '15px'
+      paddingTop: '10px',
     },
     formControl: {
       margin: theme.spacing(1),
@@ -37,10 +36,8 @@ const useStyles = makeStyles((theme) =>
       backgroundColor: '#ffffff'
     },
     toolbar: {
-      // minHeight: 128,
       alignItems: 'flex-start',
       paddingTop: theme.spacing(1),
-      paddingBottom: theme.spacing(2),
     },
     sectionDesktop: {
       display: 'none',
@@ -56,16 +53,14 @@ const useStyles = makeStyles((theme) =>
     },
     search: {
       position: 'relative',
-      // justifyContent: 'center',
-      // display: 'flex',
       borderRadius: theme.shape.borderRadius,
       backgroundColor: fade(theme.palette.common.white, 0.15),
       '&:hover': {
         backgroundColor: fade(theme.palette.common.white, 0.25),
       },
       margin: 'auto',
-      width: '50%',
-      [theme.breakpoints.up('sm')]: {
+      width: '100%',
+      [theme.breakpoints.up('md')]: {
         margin: 'auto',
         width: '50%',
       },
@@ -75,13 +70,15 @@ const useStyles = makeStyles((theme) =>
 
       padding: theme.spacing(0, 1),
       height: '100%',
-      // width: '50%',
-      // fontSize:'small',
       position: 'absolute',
       pointerEvents: 'none',
+  top: '25%'
+
     },
     inputRoot: {
       color: 'inherit',
+      width: '100%',
+
     },
     inputInput: {
       padding: theme.spacing(1, 1, 1, 0),
@@ -89,12 +86,7 @@ const useStyles = makeStyles((theme) =>
       paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
       transition: theme.transitions.create('width'),
       width: '100%',
-      [theme.breakpoints.up('sm')]: {
-        width: '12ch',
-        '&:focus': {
-          width: '20ch',
-        },
-      },
+      
     },
   }),
 );
@@ -109,7 +101,7 @@ const Header = () => {
   }
   return (
     <>
-     <div className={classes.root}>
+     <div >
       <AppBar position="static">
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -125,69 +117,7 @@ const Header = () => {
             Shoppers
 
           </Typography>
-{/*        
-          <div className={classes.sectionDesktop}>
-           
-          <select className='currency'>
-          <option value='1'>
-              1
-            </option>
-            <option value='1'>
-              2
-            </option>
-            <option value='1'>
-              3
-            </option>
-            <option value='1'>
-              4
-            </option>
-            <option value='1'>
-              5
-            </option>
-          </select>
-            
-            <IconButton
-            aria-label="account of current user"
-            // aria-controls={menuId}
-            aria-haspopup="true"
-            // onClick={handleProfileMenuOpen}
-            color="inherit"
-            >
-            <AccountCircle />
-            </IconButton>
-                        
-            <IconButton aria-label="show 17 items in cart" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <ShoppingCartOutlined />
-              </Badge>
-            </IconButton>
-           
-           */}
-            {/* <IconButton
-              edge="end"
-              aria-label="account of current user"
-              // aria-controls={menuId}
-              aria-haspopup="true"
-              // onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </div>
-          <div className={classes.sectionMobile}>
-            <IconButton
-              aria-label="show more"
-              // aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              // onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <More />
-            </IconButton>
-          </div> */}
-          {/* <div className={classes.grow} /> */}
-          <div >
-
+           <div>
            <select className='currency'>
           <option value='1'>
               1
@@ -205,8 +135,7 @@ const Header = () => {
               5
             </option>
           </select>
-            
-            <IconButton
+                     <IconButton
             aria-label="account of current user"
             // aria-controls={menuId}
             aria-haspopup="true"
@@ -221,8 +150,8 @@ const Header = () => {
                 <ShoppingCartOutlined />
               </Badge>
             </IconButton>
-           
-          </div>
+            </div>
+
         
         </Toolbar>
         <Toolbar>

@@ -1,33 +1,14 @@
-
-// import React, { useState } from 'react';
-// import { Drawer } from '@material-ui/core'
-import './SideNav.css'
-// const SideNav = () => {
-//   const [navOpen, setNavOpen] = useState(false) 
-// const click = () => {
-//   setNavOpen(true)
-// }
-//   return (
-//     <>
-//     <button onClick={click}>mee</button>
-// <Drawer 
-//   anchor={'left'}
-//   open={navOpen}
-//   children={['a', 'b']}
-//   />
-// </>
-//   )
-// }
-
-// export default SideNav
-
-
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 
 import { createStyles, makeStyles, Theme, fade } from '@material-ui/core/styles';
-import { Drawer, MenuList } from '@material-ui/core';
-import { Close } from '@material-ui/icons';
+
+import Drawer from '@material-ui/core/Drawer';
+import MenuList from '@material-ui/core/MenuList';
+import Divider from '@material-ui/core/Divider';
+import Close from '@material-ui/icons/Close';
+
+import './SideNav.css'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -37,12 +18,22 @@ const useStyles = makeStyles((theme) =>
     fullList: {
       width: 'auto',
     },
+    menuList: {
+      paddingTop: '50px',
+
+    },
+    close: {
+      paddingTop: '20px',
+     textAlign: 'end',
+     paddingRight: '10px'
+
+    }
   }),
 );
 
 const SideBar = () => {
   const classes = useStyles();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   
 const toggleDrawer = () => {
@@ -58,25 +49,68 @@ const toggleDrawer = () => {
           className={classes.fullList}
           role="presentation"
         >
-          <Close onClick={toggleDrawer}/>
-          <MenuList>
+         <div 
+          className={classes.close}
+         
+         >
+         <Close 
+          onClick={toggleDrawer}/>
+         </div>
+          <div className={classes.menuList}>
+          <div className='padding'>
+        <Link to='/'>
+        <MenuList>
             New In
           </MenuList>
-          <MenuList>
+        </Link>
+         </div>
+          <Divider/>
+         <div className='padding'>
+<Link to='/clothing'>
+
+<MenuList>
           Clothing
           </MenuList>
-          <MenuList>
+</Link>
+          </div>
+          <Divider/>
+         <div className='padding'>
+<Link to='/bags'>
+
+<MenuList>
           Bags
           </MenuList>
-          <MenuList>
+</Link>
+          </div>
+          <Divider/>
+          <div className='padding'>
+
+        <Link to='/shoes'>
+        <MenuList>
           Shoes
           </MenuList>
-          <MenuList>
+        </Link>
+          </div>
+          <Divider/>
+          <div className='padding'>
+<Link to='/hats'>
+<MenuList>
           Hats
           </MenuList>
-          <MenuList>
-          Accessorie
+</Link>
+         
+          </div>
+          <Divider/>
+          <div className='padding'>
+<Link to='/accessories'>
+<MenuList>
+          Accessories
           </MenuList>
+</Link>
+        
+          </div>
+          </div>
+         
         </div>
       </Drawer>
     </div>
