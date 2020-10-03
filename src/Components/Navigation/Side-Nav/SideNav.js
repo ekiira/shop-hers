@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { createStyles, makeStyles, Theme, fade } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 
 import Drawer from '@material-ui/core/Drawer';
 import MenuList from '@material-ui/core/MenuList';
@@ -20,7 +20,13 @@ const useStyles = makeStyles((theme) =>
     },
     menuList: {
       paddingTop: '50px',
-
+    },
+    listItem: {
+      color: '#000000', 
+      '&:hover': {
+      color: '#666666', 
+      textDecoration: 'none',
+      }
     },
     close: {
       paddingTop: '20px',
@@ -33,7 +39,7 @@ const useStyles = makeStyles((theme) =>
 
 const SideBar = () => {
   const classes = useStyles();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   
 const toggleDrawer = () => {
@@ -58,7 +64,7 @@ const toggleDrawer = () => {
          </div>
           <div className={classes.menuList}>
           <div className='padding'>
-        <Link to='/'>
+        <Link to='/' className={classes.listItem}>
         <MenuList>
             New In
           </MenuList>
@@ -66,7 +72,7 @@ const toggleDrawer = () => {
          </div>
           <Divider/>
          <div className='padding'>
-<Link to='/clothing'>
+<Link to='/clothing' className={classes.listItem}>
 
 <MenuList>
           Clothing
@@ -75,7 +81,7 @@ const toggleDrawer = () => {
           </div>
           <Divider/>
          <div className='padding'>
-<Link to='/bags'>
+<Link to='/bags' className={classes.listItem}>
 
 <MenuList>
           Bags
@@ -85,7 +91,7 @@ const toggleDrawer = () => {
           <Divider/>
           <div className='padding'>
 
-        <Link to='/shoes'>
+        <Link to='/shoes' className={classes.listItem}>
         <MenuList>
           Shoes
           </MenuList>
@@ -93,7 +99,7 @@ const toggleDrawer = () => {
           </div>
           <Divider/>
           <div className='padding'>
-<Link to='/hats'>
+<Link to='/hats' className={classes.listItem}>
 <MenuList>
           Hats
           </MenuList>
@@ -102,7 +108,7 @@ const toggleDrawer = () => {
           </div>
           <Divider/>
           <div className='padding'>
-<Link to='/accessories'>
+<Link to='/accessories' className={classes.listItem}>
 <MenuList>
           Accessories
           </MenuList>

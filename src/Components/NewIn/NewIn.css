@@ -1,0 +1,32 @@
+.off {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 80%;
+    left: 30%;
+
+}
+
+.sport {
+    background: url('../../assets/sport.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* width: ; */
+}
+
+.sport-head {
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+.sport-title {
+    font-size: 3rem;
+}
+
+.sport-subtitle {
+
+    font-size: 2rem;
+}
+
+

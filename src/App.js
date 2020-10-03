@@ -1,14 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import './App.css';
-import Header from './Header/Header';
-import SideNav from './Side-Nav/SideNav';
-import NewIn from './NewIn/NewIn';
-import Clothing from './Clothing/Clothing';
-import Shoes from './Shoes/Shoes';
-import Bags from './Bags/Bags';
-import Hats from './Hats/Hats';
+import Header from './Components/Navigation/Header/Header';
+import SideNav from './Components/Navigation/Side-Nav/SideNav';
+import NewIn from './Components/NewIn/NewIn';
+import Clothing from './Components/Clothing/Clothing';
+import Shoes from './Components/Shoes/Shoes';
+import Bags from './Components/Bags/Bags';
+import Hats from './Components/Hats/Hats';
 import Accessories from './Accessories/Accessories';
+import MainTab from './Components/Navigation/Header/Tab';
+import Footer from './Components/Navigation/Footer/Footer';
 
 
 const App = () => {
@@ -17,8 +19,9 @@ const App = () => {
  
       <Router>
       <Header />
-
+      <MainTab />
       <SideNav />
+
         <Switch>
         
           <Route path='/' exact component={NewIn} />
@@ -29,6 +32,8 @@ const App = () => {
           <Route path='/accessories' exact component={Accessories} />
 
         </Switch>
+      <Footer />
+
       </Router>
      
     </div>

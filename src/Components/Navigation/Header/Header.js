@@ -6,10 +6,8 @@ import {
   Toolbar,
   Typography,
   IconButton,
-  InputLabel,
   InputBase,
   Badge,
-  TextField
  } from '@material-ui/core';
 import { Menu, AccountCircle, ShoppingCartOutlined } from '@material-ui/icons';
 
@@ -24,7 +22,7 @@ const useStyles = makeStyles((theme) =>
       flexGrow: 1,
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+      marginRight: theme.spacing(1),
     },
     title: {
       flexGrow: 1,
@@ -72,7 +70,7 @@ const useStyles = makeStyles((theme) =>
       height: '100%',
       position: 'absolute',
       pointerEvents: 'none',
-  top: '25%'
+  top: '20%'
 
     },
     inputRoot: {
@@ -111,14 +109,14 @@ const Header = () => {
             aria-label="open drawer"
             onClick={toggleDrawer}
           >
-            <Menu />
+            <Menu className='d-block d-md-none'/>
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             Shoppers
 
           </Typography>
            <div>
-           <select className='currency'>
+           {/* <select className='currency'>
           <option value='1'>
               1
             </option>
@@ -134,7 +132,7 @@ const Header = () => {
             <option value='1'>
               5
             </option>
-          </select>
+          </select> */}
                      <IconButton
             aria-label="account of current user"
             // aria-controls={menuId}
