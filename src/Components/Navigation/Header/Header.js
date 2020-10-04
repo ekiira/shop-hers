@@ -12,6 +12,7 @@ import {
 import { Menu, AccountCircle, ShoppingCartOutlined } from '@material-ui/icons';
 
 import './Header.css'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -27,6 +28,11 @@ const useStyles = makeStyles((theme) =>
     title: {
       flexGrow: 1,
       paddingTop: '10px',
+      color: '#ffffff',
+      '&:hover' : {
+        textDecoration: 'none',
+        color: '#ffffff'
+      }
     },
     formControl: {
       margin: theme.spacing(1),
@@ -109,10 +115,12 @@ const Header = () => {
             aria-label="open drawer"
             onClick={toggleDrawer}
           >
-            <Menu className='d-block d-md-none'/>
+            <Menu/>
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
+            <Link to='/' className={classes.title}>
             Shoppers
+            </Link>
 
           </Typography>
            <div>

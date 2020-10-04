@@ -5,14 +5,12 @@
     position: absolute;
     top: 80%;
     left: 30%;
-
 }
 
 .sport {
     background: url('../../assets/sport.jpeg') no-repeat;
     background-size: cover;
     background-position: center;
-    /* width: ; */
 }
 
 .sport-head {
@@ -29,4 +27,107 @@
     font-size: 2rem;
 }
 
+.sales {
+    background: url('../../assets/wallpaper.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
+.overlay {
+    position: relative;
+}
+
+.overlay::after {
+    width: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.sales-s {
+    position: relative;
+    z-index: 100;
+
+}
+
+.sales-head {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.sales-title {
+    font-size: 1rem !important;
+}
+
+.gift-link {
+    color: #666666;
+    font-size: 1.5rem;
+}
+
+.gift-link:hover {
+    color: #000000;
+}
+
+.category-content {
+    position: relative;
+}
+  
+.category-content .image-overlay {
+background: rgba(0,0,0,0.7);
+position: absolute;
+height: 100%;
+max-width: auto;
+left: 0;
+top: 0;
+bottom: 0;
+right: 0;
+opacity: 0;
+-webkit-transition: all 0.4s ease-in-out 0s;
+-moz-transition: all 0.4s ease-in-out 0s;
+transition: all 0.4s ease-in-out 0s;
+}
+
+.category-content:hover .image-overlay{
+opacity: 1;
+}
+
+.category-details {
+position: absolute;
+text-align: center;
+padding-left: 1em;
+padding-right: 1em;
+width: 100%;
+top: 50%;
+left: 50%;
+opacity: 0;
+-webkit-transform: translate(-50%, -50%);
+-moz-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+-webkit-transition: all 0.3s ease-in-out 0s;
+-moz-transition: all 0.3s ease-in-out 0s;
+transition: all 0.3s ease-in-out 0s;
+}
+
+.category-content:hover .category-details{
+top: 50%;
+left: 50%;
+opacity: 1;
+}
+
+.category-details {
+color: #fff;
+font-weight: 500;
+letter-spacing: 0.15em;
+margin-bottom: 0.5em;
+text-transform: uppercase;
+}
+
+.fadeIn-top{
+top: 20%;
+}

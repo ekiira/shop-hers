@@ -9,7 +9,7 @@ import Shoes from './Components/Shoes/Shoes';
 import Bags from './Components/Bags/Bags';
 import Hats from './Components/Hats/Hats';
 import Accessories from './Accessories/Accessories';
-import MainTab from './Components/Navigation/Header/Tab';
+// import MainTab from './Components/Navigation/Tab/Tab';
 import Footer from './Components/Navigation/Footer/Footer';
 
 
@@ -19,7 +19,7 @@ const App = () => {
  
       <Router>
       <Header />
-      <MainTab />
+      {/* <MainTab /> */}
       <SideNav />
 
         <Switch>

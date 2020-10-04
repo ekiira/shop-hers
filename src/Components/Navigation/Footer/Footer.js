@@ -13,11 +13,13 @@ import PinterestIcon from '@material-ui/icons/Pinterest';
 const useStyles = makeStyles({
   links: {
     listStyle: 'none',
-    color:'#666666'
+    color:'#666666',
+    '&:hover': {
+      color: '#000000'
+    }
   },
   top: {
     backgroundColor: '#eeeeee',
-    // opacity: '0.5'
   },
   bottom: {
     backgroundColor: '#000000',
@@ -28,6 +30,7 @@ const useStyles = makeStyles({
     display: 'flex',
   }
 });
+
 const Footer = () => {
   const classes = useStyles()
   return (
@@ -121,7 +124,7 @@ const Footer = () => {
     <div className={`${classes.bottom} pt-4 py-3`}>
       <Container className='d-flex justify-content-between'>
           <p className='mb-0'>&copy; Shoppers</p>
-          <p className='mb-0'>
+          <div className='mb-0'>
           <ul className={`${classes.list}`}>
             <li className='mr-2'>
               Privacy
@@ -134,7 +137,7 @@ const Footer = () => {
             </li>
           </ul>
       
-          </p>
+          </div>
       </Container>
     </div>
   </div>

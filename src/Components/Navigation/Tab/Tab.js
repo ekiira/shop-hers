@@ -4,14 +4,15 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { makeStyles } from '@material-ui/core/styles';
 
-import './Header.css'
-const MainTab = () => {
-    const useStyles = makeStyles({
-        root: {
-          flexGrow: 1,
-				},
+import './Tab.css'
+const useStyles = makeStyles({
+  root: {
+    flexGrow: 1,
+  },
 
-      });
+});
+
+const MainTab = () => {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
   
@@ -28,11 +29,10 @@ const MainTab = () => {
           textColor="primary"
           centered
         >
-        	<Tab label="Home" />
-          <Tab label="Clothing" />
-          <Tab label="Shoes" />
-          <Tab label="Bags" />
-          <Tab label="Hats" />
+        	<Tab label="All" />
+          <Tab label="Men" />
+          <Tab label="Women" />
+          <Tab label="Kids" />
         </Tabs>
       </Paper>
        

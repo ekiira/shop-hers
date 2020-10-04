@@ -1,9 +1,12 @@
 import React from 'react';
+import MainTab from '../Navigation/Tab/Tab';
 
 const Bags = () => {
   return (
     <div>
-     Clothing
+      bags
+    <MainTab/>
+     
 
     </div>
   );

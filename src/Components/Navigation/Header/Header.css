@@ -10,13 +10,3 @@
   height: 30px;
   margin-right: 1rem;
 } 
-.MuiTab-textColorPrimary.Mui-selected {
-  color: #000000 !important;
-}
-
-.MuiTab-textColorPrimary.Mui-selected:focus {
-  outline: none!important;
-}
-.PrivateTabIndicator-colorPrimary-15 {
-  background-color: #000000 !important;
-}
