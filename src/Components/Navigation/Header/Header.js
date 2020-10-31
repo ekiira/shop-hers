@@ -124,32 +124,16 @@ const Header = () => {
 
           </Typography>
            <div>
-           {/* <select className='currency'>
-          <option value='1'>
-              1
-            </option>
-            <option value='1'>
-              2
-            </option>
-            <option value='1'>
-              3
-            </option>
-            <option value='1'>
-              4
-            </option>
-            <option value='1'>
-              5
-            </option>
-          </select> */}
-                     <IconButton
-            aria-label="account of current user"
-            // aria-controls={menuId}
-            aria-haspopup="true"
-            // onClick={handleProfileMenuOpen}
-            color="inherit"
-            >
-            <AccountCircle />
-            </IconButton>
+     
+          <Link to='/login'>
+            <IconButton
+                aria-label="account of current user"
+                aria-haspopup="true"
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton>
+          </Link>
                         
             <IconButton aria-label="show 17 items in cart" color="inherit">
               <Badge badgeContent={17} color="secondary">
