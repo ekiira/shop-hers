@@ -11,33 +11,71 @@ import Hats from './Components/Hats/Hats';
 import Accessories from './Accessories/Accessories';
 // import MainTab from './Components/Navigation/Tab/Tab';
 import Footer from './Components/Navigation/Footer/Footer';
-import SignUp from './auth/SignUp';
+import Auth from './auth/Auth';
 
+
+import { persistReducer, persistStore } from 'redux-persist'
+import { PersistGate } from 'redux-persist/integration/react'
+
+import storage from 'redux-persist/lib/storage'
+
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import rootReducer from './redux/reducers/rootReducer';
+
+
+const persistConfig = {
+  key: 'root',
+  storage,
+  whitelist: []
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+let store = createStore (
+  persistedReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
+)
+
+let persistor = persistStore(store);
 
 const App = ( ) => {
   return (
-    <div className="App">
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+      <div className="App">
  
-      <Router>
-      <Header />
-      <SideNav />  
-        <Switch>
-        
-          <Route path='/' exact component={NewIn} />
-      <Route path='/login' exact component={SignUp} />
+ <Router>
+   {window.location.pathname !== '/login' ? (
+     <>
+     <Header />
+ <SideNav />  
+     </>
+   ) : null}
 
-          <Route path='/clothing' exact component={Clothing} />
-          <Route path='/shoes' exact component={Shoes} />
-          <Route path='/bags' exact component={Bags} />
-          <Route path='/hats' exact component={Hats} />
-          <Route path='/accessories' exact component={Accessories} />
+   <Switch>
+   
+     <Route path='/' exact component={NewIn} />
+ <Route path='/login' exact component={Auth} />
 
-        </Switch>
-      <Footer />
+     <Route path='/clothing' exact component={Clothing} />
+     <Route path='/shoes' exact component={Shoes} />
+     <Route path='/bags' exact component={Bags} />
+     <Route path='/hats' exact component={Hats} />
+     <Route path='/accessories' exact component={Accessories} />
 
-      </Router>
-     
-    </div>
+   </Switch>
+
+   {window.location.pathname !== '/login' ? <Footer /> : null}
+ 
+
+ </Router>
+
+</div>
+
+      </PersistGate>
+
+    </Provider>
+
   );
 }
 
