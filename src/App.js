@@ -22,26 +22,27 @@ import storage from 'redux-persist/lib/storage'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import rootReducer from './redux/reducers/rootReducer';
+import Admin from './admin/Admin';
+import Add from './admin/Add';
 
+// const persistConfig = {
+//   key: 'root',
+//   storage,
+//   whitelist: []
+// }
 
-const persistConfig = {
-  key: 'root',
-  storage,
-  whitelist: []
-}
+// const persistedReducer = persistReducer(persistConfig, rootReducer)
+// let store = createStore (
+//   persistedReducer,
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
+// )
 
-const persistedReducer = persistReducer(persistConfig, rootReducer)
-let store = createStore (
-  persistedReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
-)
-
-let persistor = persistStore(store);
+// let persistor = persistStore(store);
 
 const App = ( ) => {
   return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
+    // <Provider store={store}>
+      // <PersistGate loading={null} persistor={persistor}>
       <div className="App">
  
  <Router>
@@ -56,6 +57,9 @@ const App = ( ) => {
    
      <Route path='/' exact component={NewIn} />
  <Route path='/login' exact component={Auth} />
+ <Route path='/login' exact component={Auth} />
+ <Route path='/admin' exact component={Admin} />
+ <Route path='/admin/add' exact component={Add} />
 
      <Route path='/clothing' exact component={Clothing} />
      <Route path='/shoes' exact component={Shoes} />
@@ -72,9 +76,9 @@ const App = ( ) => {
 
 </div>
 
-      </PersistGate>
+      // </PersistGate>
 
-    </Provider>
+    // </Provider>
 
   );
 }
