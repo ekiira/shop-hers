@@ -1,0 +1,112 @@
+@import '../../base-styles/variable.scss';
+
+.logoLink {
+    color: $primaryColor !important;
+}
+
+.logo {
+    color: $primaryColor !important;
+    text-align: center !important;
+    font-size: 40px !important;
+}
+
+.formBody {
+    position:relative;
+    width:50%;
+    height: auto;
+    margin:4em auto;
+    background:#fff;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow:0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    font-family: 'Merriweather', serif !important;
+
+    &_form {
+        padding: 25px 10px;
+    } 
+    &_fieldWrap {
+        margin-bottom: 20px;
+    }
+
+
+    @media (max-width: 300px) {
+        width:90%;
+    }
+    @media (min-width: 301px) and (max-width: 767px) {
+        width:80%;
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+        width:70%;
+    }
+
+    &_inputButtonWrapperIn {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_inputButtonWrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &_inputButton {
+        background: $primaryColor !important;
+        width: 100px !important;
+        color: #ffffff !important;
+
+        &:hover {
+            background: #ffffff !important;
+            width: 100px !important;
+            color: $primaryColor !important;
+            border: 1px solid $primaryColor !important;
+        }
+
+        &:focus {
+            background: #ffffff !important;
+            width: 100px !important;
+            color: $primaryColor !important;
+            border: 1px solid $primaryColor !important;
+            outline: 5px auto $primaryColor !important;
+        }
+    }
+    
+  }
+ 
+
+.asterik {
+	color: red;
+}
+
+.heading {
+	color: $primaryColor;
+	font-family: 'Poppins';
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 19.5px;
+}
+
+.inputContainer {
+    font-family: 'Merriweather', serif !important;
+
+    border: 1px solid $inputs;
+	padding: 5px;
+	border-radius: 5px ;
+	font-family: inherit;
+	font-weight: normal !important;
+    &:hover {
+		border: 1px solid $hoverButtons;
+	}
+	&:focus {
+		border: 1px solid $primaryColor;
+		outline: none;
+	}
+	&:focus-within {
+		border: 1px solid $primaryColor;
+	}  
+
+}
+
+.inputLabel {
+    font-family: 'Merriweather', serif !important;
+
+}
