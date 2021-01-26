@@ -172,7 +172,7 @@ const Header = ({ isOpen, setIsOpen }) => {
             </IconButton>
             <Typography className={classes.title} variant="h6">
               <Link to="/" className={classes.title}>
-                SHOPPERS
+                Shop_Hers
               </Link>
             </Typography>
             <div className={classes.searchDesktop}>
