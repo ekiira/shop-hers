@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { createStyles, makeStyles, fade } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
 import {
@@ -11,8 +13,7 @@ import {
 } from "@material-ui/core";
 import { Menu, AccountCircle, ShoppingCartOutlined } from "@material-ui/icons";
 
-import "./Header.css";
-import { Link } from "react-router-dom";
+import "./header.scss";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -117,6 +118,35 @@ const useStyles = makeStyles((theme) =>
       transition: theme.transitions.create("width"),
       width: "100%",
     },
+    nav: {
+      width: "100%",
+      display: "none",
+      [theme.breakpoints.up("sm")]: {
+        display: "flex",
+        justifyContent: "space-between",
+      },
+    },
+    navLists: {
+      display: "inline-flex",
+      width: "100%",
+      margin: "auto",
+      // justifyContent: "flex-start",
+      padding: 0,
+    },
+    navList: {
+      color: "#ffffff",
+      listStyle: "none",
+      padding: "10px",
+      textAlign: "center",
+      fontSize: "16px",
+      whiteSpace: "nowrap",
+      "&:first-child": {
+        paddingLeft: 0,
+      },
+    },
+    end: {
+      justifyContent: "flex-end",
+    },
   })
 );
 
@@ -191,6 +221,21 @@ const Header = ({ isOpen, setIsOpen }) => {
                 inputProps={{ "aria-label": "search" }}
               />
             </div>
+          </Toolbar>
+          <Toolbar className={classes.nav}>
+            <ul className={classes.navLists}>
+              <li className={classes.navList}>New In</li>
+              <li className={classes.navList}>Clothing</li>
+              <li className={classes.navList}>Shoes</li>
+              <li className={classes.navList}>Bags</li>
+              <li className={classes.navList}>Hats</li>
+              <li className={classes.navList}>Accessories</li>
+            </ul>
+
+            <ul className={`${classes.navLists} ${classes.end}`}>
+              <li className={classes.navList}>Blog</li>
+              <li className={classes.navList}>Clothing</li>
+            </ul>
           </Toolbar>
         </AppBar>
       </div>

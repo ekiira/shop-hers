@@ -120,6 +120,17 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 <MenuList>Accessories</MenuList>
               </Link>
             </div>
+            <Divider />
+
+            <div className="padding">
+              <Link
+                to="/blog"
+                onClick={() => setIsOpen(!isOpen)}
+                className={classes.listItem}
+              >
+                <MenuList>Blog</MenuList>
+              </Link>
+            </div>
           </div>
         </div>
       </Drawer>
