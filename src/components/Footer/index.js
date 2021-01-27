@@ -9,6 +9,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 
+import { NAME } from '../../constants/variables'
 
 const useStyles = makeStyles({
   links: {
@@ -65,7 +66,7 @@ const Footer = () => {
             </li>
             <li>
               <Link to='#' className={classes.links} >
-                Careers at Shoppers
+                {`Careers at ${NAME}`}
               </Link>
             </li>
             <li>
@@ -84,12 +85,12 @@ const Footer = () => {
             <p className='font-weight-bold'>More from Shoppers</p>
 
               <Link to='#' className={classes.links} >
-                Mobile ans Shoppers Apps
+                {`Mobile ans ${NAME} Apps`}
               </Link>
             </li>
             <li>
               <Link to='#' className={classes.links} >
-                Shoppers Marketplace
+                {`${NAME} Marketplace`}
               </Link>
             </li>
             <li>
@@ -123,7 +124,7 @@ const Footer = () => {
     </div>
     <div className={`${classes.bottom} pt-4 py-3`}>
       <Container className='d-flex justify-content-between'>
-          <p className='mb-0'>&copy; Shoppers</p>
+          <p className='mb-0'>&copy; {NAME}</p>
           <div className='mb-0'>
           <ul className={`${classes.list}`}>
             <li className='mr-2'>

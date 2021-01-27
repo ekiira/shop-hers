@@ -14,7 +14,7 @@ import {
 import { Menu, AccountCircle, ShoppingCartOutlined } from "@material-ui/icons";
 
 import "./header.scss";
-
+import { NAME } from '../../constants/variables'
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
@@ -172,7 +172,7 @@ const Header = ({ isOpen, setIsOpen }) => {
             </IconButton>
             <Typography className={classes.title} variant="h6">
               <Link to="/" className={classes.title}>
-                Shop_Hers
+                {NAME}
               </Link>
             </Typography>
             <div className={classes.searchDesktop}>

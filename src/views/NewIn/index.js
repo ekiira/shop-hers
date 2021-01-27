@@ -38,11 +38,11 @@ const NewIn = () => {
   return (
     <div className='py-5'>
       <Container className='pb-5'>
-        <h3 className='font-weight-bold pb-5'>Shop By Category</h3>
+        <h3 className='font-weight-bold pb-3'>Shop By Category</h3>
         <Row xs={2} md={4}>
           <Col className='pt-4 pt-lg-0'>
             <div className='category-content'> 
-              <Link to='/shoes'>
+              <Link to='/shop/shoes'>
                 <div className='image-overlay'></div>
               </Link>
               <img src={sh1} className='img-fluid' alt=''/>
@@ -54,7 +54,7 @@ const NewIn = () => {
 
           <Col className='pt-4 pt-lg-0'>
             <div className='category-content'> 
-              <Link to='/clothing'>
+              <Link to='/shop/clothing'>
                 <div className='image-overlay'></div>
               </Link>
               <img src={cl1} className='img-fluid' alt=''/>
@@ -66,7 +66,7 @@ const NewIn = () => {
 
           <Col className='pt-4 pt-lg-0'>
             <div className='category-content'> 
-              <Link to='/bags'>
+              <Link to='/shop/bags'>
                 <div className='image-overlay'></div>
               </Link>
               <img src={Bg1} className='img-fluid' alt=''/>
@@ -78,7 +78,7 @@ const NewIn = () => {
 
           <Col className='pt-4 pt-lg-0'>
             <div className='category-content'> 
-              <Link to='/hats'>
+              <Link to='/shop/hats'>
                 <div className='image-overlay'></div>
               </Link>
               <img src={Hat1} className='img-fluid' alt=''/>
@@ -90,7 +90,7 @@ const NewIn = () => {
         </Row>
       </Container>
       <Container className='pb-5'>
-        <h3 className='font-weight-bold pb-5'>New Arrivals</h3>
+        <h3 className='font-weight-bold pb-3'>New Arrivals</h3>
         <Row xs={3} md={3}>
           <Col className='pt-4 pt-lg-0'>
             <img src={sh2} className='img-fluid' alt=''/>
@@ -185,10 +185,10 @@ const NewIn = () => {
         </div>
       </div>
 
-      <div className='gift-pack py-5'>
+      <div className='gift-pack pt-5 pb-'>
         <Container>
           <h3 className='font-weight-bold'>Check out our Gift Packs</h3>
-          <Row xs={2} md={2} lg={4} className='pt-5'>
+          <Row xs={2} md={2} lg={4} className='pt-3'>
             <Col className='pt-4 pt-lg-0'>
               <img src={gft1} className='img-fluid' alt=''/>
             </Col>
