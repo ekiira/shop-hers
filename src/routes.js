@@ -13,8 +13,8 @@ export const Routes = [
     layout: "/shop",
   },
   {
-    path: "/clothing",
-    name: "Clothing",
+    path: "/newin",
+    name: "New In",
     component: Clothing,
     layout: "/shop",
   },

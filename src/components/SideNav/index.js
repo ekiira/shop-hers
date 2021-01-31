@@ -8,7 +8,7 @@ import MenuList from "@material-ui/core/MenuList";
 import Divider from "@material-ui/core/Divider";
 import Close from "@material-ui/icons/Close";
 
-import "./SideNav.css";
+import '../../base-styles/styles.scss'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -51,19 +51,10 @@ const SideBar = ({ isOpen, setIsOpen }) => {
             <Close onClick={toggleDrawer} />
           </div>
           <div className={classes.menuList}>
-            <div className="padding">
+            <Divider />
+            <div className="p2">
               <Link
                 to="/shop"
-                onClick={() => setIsOpen(!isOpen)}
-                className={classes.listItem}
-              >
-                <MenuList>Overview</MenuList>
-              </Link>
-            </div>
-            <Divider />
-            <div className="padding">
-              <Link
-                to="/shop/newin"
                 onClick={() => setIsOpen(!isOpen)}
                 className={classes.listItem}
               >
@@ -71,7 +62,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               </Link>
             </div>
             <Divider />
-            <div className="padding">
+            <div className="p2">
               <Link
                 to="/shop/clothing"
                 onClick={() => setIsOpen(!isOpen)}
@@ -81,7 +72,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               </Link>
             </div>
             <Divider />
-            <div className="padding">
+            <div className="p2">
               <Link
                 to="/shop/bags"
                 onClick={() => setIsOpen(!isOpen)}
@@ -91,7 +82,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               </Link>
             </div>
             <Divider />
-            <div className="padding">
+            <div className="p2">
               <Link
                 to="/shop/shoes"
                 onClick={() => setIsOpen(!isOpen)}
@@ -101,7 +92,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               </Link>
             </div>
             <Divider />
-            <div className="padding">
+            <div className="p2">
               <Link
                 to="/shop/hats"
                 onClick={() => setIsOpen(!isOpen)}
@@ -111,7 +102,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               </Link>
             </div>
             <Divider />
-            <div className="padding">
+            <div className="p2">
               <Link
                 to="/shop/accessories"
                 onClick={() => setIsOpen(!isOpen)}
@@ -122,7 +113,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
             </div>
             <Divider />
 
-            <div className="padding">
+            <div className="p2">
               <Link
                 to="/blog"
                 onClick={() => setIsOpen(!isOpen)}

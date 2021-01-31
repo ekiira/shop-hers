@@ -1,40 +1,48 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Tab } from 'semantic-ui-react';
-import Login from './Login';
-import styles from './auth.module.scss';
-import SignUp from './SignUp';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Tab } from "semantic-ui-react";
+import Login from "./Login";
+import "./auth.scss";
+import SignUp from "./SignUp";
 
-import 'semantic-ui-css/semantic.min.css'
+import "semantic-ui-css/semantic.min.css";
 
-import '../../styles/styles.scss'
-import { Typography } from '@material-ui/core';
-
+import "../../base-styles/styles.scss";
+import Typography from "@material-ui/core/Typography";
+import { NAME } from '../../constants/variables'
 const panes = [
-    { menuItem: "Don't have an account?", render: () => <Tab.Pane> <SignUp/> </Tab.Pane> },
-    { menuItem: "Already have an account? ", render: () => <Tab.Pane> <Login/> </Tab.Pane> },
-  ]
+  {
+    menuItem: "Don't have an account?",
+    render: () => (
+      <Tab.Pane>
+        {" "}
+        <SignUp />{" "}
+      </Tab.Pane>
+    ),
+  },
+  {
+    menuItem: "Already have an account? ",
+    render: () => (
+      <Tab.Pane>
+        {" "}
+        <Login />{" "}
+      </Tab.Pane>
+    ),
+  },
+];
 
+const Auth = () => {
 
-const Auth = ({location}) => {
-    console.log('ddd', location)
-
-    return (
-        <div className='py-5'>
-
-           <Link to='/' className={styles.logoLink}>
-           <Typography className={styles.logo}>
-                Shoppers
-            </Typography>
-           </Link>
-            <div className={`${styles.formBody} py-4 px-3`}>
-                <Tab 
-                    panes={panes}  
-                    defaultActiveIndex={1} 
-                    />
-            </div>
-        </div> 
-    )
-}
+  return (
+    <div className="auth">
+      <Link to="/" className="logoLink">
+        <Typography className="logo">{NAME}</Typography>
+      </Link>
+      <div className="formBody">
+        <Tab panes={panes} defaultActiveIndex={1} />
+      </div>
+    </div>
+  );
+};
 
 export default Auth;

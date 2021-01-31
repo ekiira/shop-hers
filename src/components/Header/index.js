@@ -3,18 +3,17 @@ import { Link } from "react-router-dom";
 
 import { createStyles, makeStyles, fade } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  IconButton,
-  InputBase,
-  Badge,
-} from "@material-ui/core";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import IconButton from "@material-ui/core/IconButton";
+import InputBase from "@material-ui/core/InputBase";
+import Badge from "@material-ui/core/Badge";
 import { Menu, AccountCircle, ShoppingCartOutlined } from "@material-ui/icons";
 
-import "./header.scss";
-import { NAME } from '../../constants/variables'
+import "../../base-styles/styles.scss";
+import { NAME } from "../../constants/variables";
+
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
@@ -130,7 +129,6 @@ const useStyles = makeStyles((theme) =>
       display: "inline-flex",
       width: "100%",
       margin: "auto",
-      // justifyContent: "flex-start",
       padding: 0,
     },
     navList: {
@@ -234,7 +232,7 @@ const Header = ({ isOpen, setIsOpen }) => {
 
             <ul className={`${classes.navLists} ${classes.end}`}>
               <li className={classes.navList}>Blog</li>
-              <li className={classes.navList}>Clothing</li>
+              <li className={classes.navList}>Flag</li>
             </ul>
           </Toolbar>
         </AppBar>

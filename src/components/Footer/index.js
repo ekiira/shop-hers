@@ -1,148 +1,150 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import { makeStyles } from '@material-ui/core/styles';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import PinterestIcon from '@material-ui/icons/Pinterest';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { NAME } from '../../constants/variables'
+import Box from "@material-ui/core/Box";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+
+import { makeStyles } from "@material-ui/core/styles";
+
+import TwitterIcon from "@material-ui/icons/Twitter";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import PinterestIcon from "@material-ui/icons/Pinterest";
+
+import { NAME } from "../../constants/variables";
+import "../../base-styles/styles.scss";
 
 const useStyles = makeStyles({
   links: {
-    listStyle: 'none',
-    color:'#666666',
-    '&:hover': {
-      color: '#000000'
-    }
+    listStyle: "none",
+    color: "#666666",
+    "&:hover": {
+      color: "#000000",
+    },
   },
   top: {
-    backgroundColor: '#eeeeee',
+    backgroundColor: "#eeeeee",
   },
   bottom: {
-    backgroundColor: '#000000',
-    color: '#ffffff',
+    backgroundColor: "#000000",
+    color: "#ffffff",
   },
   list: {
-    listStyle: 'none',
-    display: 'flex',
-  }
+    listStyle: "none",
+    display: "flex",
+  },
+  title: {
+    fontWeight: "bold",
+  },
+  bottom_1: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
 });
 
 const Footer = () => {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
     <div className={classes.root}>
-    <div className={`${classes.top} py-5 d-none d-lg-block`}>
-     <Container className={classes.links} >
-        <Row lg={4} >
-          <Col>
-          <p className='font-weight-bold'>Help and Information</p>
-            <li>
-              <Link to='#' className={classes.links}>
-                Help
-              </Link>
-            </li>
-            <li>
-              <Link to='#' className={classes.links} >
-                Track Order
-              </Link>
-            </li>
-            <li>
-              <Link to='#' className={classes.links} >
-                Delivery Returns
-              </Link>
-            </li>
-          </Col>
-          <Col>
-            <p className='font-weight-bold'>About Shoppers</p>
-            <li>
-              <Link to='#' className={classes.links} >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to='#' className={classes.links} >
-                {`Careers at ${NAME}`}
-              </Link>
-            </li>
-            <li>
-              <Link to='#' className={classes.links} >
-                Corporate Responsibility
-              </Link>
-            </li>
-            <li>
-              <Link to='#' className={classes.links} >
-                Investors Site
-              </Link>
-            </li>
-          </Col>
-          <Col>
-            <li>
-            <p className='font-weight-bold'>More from Shoppers</p>
+      <Box className={`${classes.top} pt5 pb5`}>
+        <Container fixed className={classes.links}>
+          <Grid container spacing={2}>
+            <Grid item xs={6} md={3}>
+              <p className={classes.title}>Help and Information</p>
+              <li>
+                <Link to="#" className={classes.links}>
+                  Help
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className={classes.links}>
+                  Track Order
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className={classes.links}>
+                  Delivery Returns
+                </Link>
+              </li>
+            </Grid>
+            <Grid item xs={6} md={3}>
+              <p className={classes.title}>About Shoppers</p>
+              <li>
+                <Link to="#" className={classes.links}>
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className={classes.links}>
+                  {`Careers at ${NAME}`}
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className={classes.links}>
+                  Corporate Responsibility
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className={classes.links}>
+                  Investors Site
+                </Link>
+              </li>
+            </Grid>
+            <Grid item xs={6} md={3}>
+              <li>
+                <p className={classes.title}>More from Shoppers</p>
 
-              <Link to='#' className={classes.links} >
-                {`Mobile ans ${NAME} Apps`}
-              </Link>
-            </li>
-            <li>
-              <Link to='#' className={classes.links} >
-                {`${NAME} Marketplace`}
-              </Link>
-            </li>
-            <li>
-              <Link to='#' className={classes.links} >
-                Gift vouchers
-              </Link>
-            </li>
-            <li>
-              <Link to='#' className={classes.links} >
-                Fashion Discovery
-              </Link>
-            </li>
-          </Col>
-          <Col>
-          <p className='font-weight-bold'>Socials</p>
+                <Link to="#" className={classes.links}>
+                  {`Mobile ans ${NAME} Apps`}
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className={classes.links}>
+                  {`${NAME} Marketplace`}
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className={classes.links}>
+                  Gift vouchers
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className={classes.links}>
+                  Fashion Discovery
+                </Link>
+              </li>
+            </Grid>
+            <Grid item xs={6} md={3}>
+              <p className={classes.title}>Socials</p>
 
-            <li>
-              <Link to='#' className={classes.links}>
-               <TwitterIcon className='mr-3'/>
-               <InstagramIcon className='mr-3'/>
-               <FacebookIcon className='mr-3'/>
-               <PinterestIcon/>
-              </Link>
-            </li>
-          </Col>
-
-  
-        </Row>
-     </Container>
-
-    </div>
-    <div className={`${classes.bottom} pt-4 py-3`}>
-      <Container className='d-flex justify-content-between'>
-          <p className='mb-0'>&copy; {NAME}</p>
-          <div className='mb-0'>
-          <ul className={`${classes.list}`}>
-            <li className='mr-2'>
-              Privacy
-            </li>
-            <li className='mr-2'>
-              |
-            </li>
-            <li>
-              Ts&Cs 
-            </li>
-          </ul>
-      
+              <li>
+                <Link to="#" className={classes.links}>
+                  <TwitterIcon className="mr3" />
+                  <InstagramIcon className="mr3" />
+                  <FacebookIcon className="mr3" />
+                  <PinterestIcon />
+                </Link>
+              </li>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+      <div className={`${classes.bottom} pt3 pb3`}>
+        <Container className={classes.bottom_1}>
+          <p className="mb0">&copy; {NAME}</p>
+          <div className="mb0">
+            <ul className={`${classes.list}`}>
+              <li className="mr2">Privacy</li>
+              <li className="mr2">|</li>
+              <li>Ts&Cs</li>
+            </ul>
           </div>
-      </Container>
+        </Container>
+      </div>
     </div>
-  </div>
   );
-}
+};
 
 export default Footer;
