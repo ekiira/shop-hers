@@ -42,6 +42,13 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
     alignItems: "center",
   },
+  inspire: {
+    fontSize: "16px",
+  },
+  inspireLink: {
+    color: "white",
+    fontWeight: 500,
+  },
 });
 
 const Footer = () => {
@@ -134,14 +141,21 @@ const Footer = () => {
       <div className={`${classes.bottom} pt3 pb3`}>
         <Container className={classes.bottom_1}>
           <p className="mb0">&copy; {NAME}</p>
-          <div className="mb0">
-            <ul className={`${classes.list}`}>
-              <li className="mr2">Privacy</li>
-              <li className="mr2">|</li>
-              <li>Ts&Cs</li>
-            </ul>
-          </div>
+          <ul className={`${classes.list}`}>
+            <li className="mr2">Privacy</li>
+            <li className="mr2">|</li>
+            <li>Ts&Cs</li>
+          </ul>
         </Container>
+        <div className="text-center">
+          <p className={classes.inspire}>
+            Inspired by{" "}
+            <a href="/asos.com" target="_blank" className={classes.inspireLink}>
+              {" "}
+              asos
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

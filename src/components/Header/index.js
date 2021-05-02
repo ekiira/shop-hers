@@ -222,17 +222,33 @@ const Header = ({ isOpen, setIsOpen }) => {
           </Toolbar>
           <Toolbar className={classes.nav}>
             <ul className={classes.navLists}>
-              <li className={classes.navList}>New In</li>
-              <li className={classes.navList}>Clothing</li>
-              <li className={classes.navList}>Shoes</li>
-              <li className={classes.navList}>Bags</li>
-              <li className={classes.navList}>Hats</li>
-              <li className={classes.navList}>Accessories</li>
+              <li className={classes.navList}>
+                <Link to="/shop">New In</Link>
+              </li>
+              <li className={classes.navList}>
+                <Link to="/shop/clothing">Clothing</Link>
+              </li>
+              <li className={classes.navList}>
+                <Link to="/shop/shoes">Shoes</Link>
+              </li>
+              <li className={classes.navList}>
+                <Link to="/shop/bags">Bags</Link>
+              </li>
+              <li className={classes.navList}>
+                <Link to="/shop/hats">Hats</Link>
+              </li>
+              <li className={classes.navList}>
+                <Link to="/shop/accessories">Accessories</Link>
+              </li>
             </ul>
 
             <ul className={`${classes.navLists} ${classes.end}`}>
-              <li className={classes.navList}>Blog</li>
-              <li className={classes.navList}>Flag</li>
+              <li className={classes.navList}>
+                <Link to="/">Blog</Link>
+              </li>
+              <li className={classes.navList}>
+                <Link to="/">Flag</Link>
+              </li>
             </ul>
           </Toolbar>
         </AppBar>

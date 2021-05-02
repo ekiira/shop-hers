@@ -9,7 +9,7 @@ import "semantic-ui-css/semantic.min.css";
 
 import "../../base-styles/styles.scss";
 import Typography from "@material-ui/core/Typography";
-import { NAME } from '../../constants/variables'
+import { NAME } from "../../constants/variables";
 const panes = [
   {
     menuItem: "Don't have an account?",
@@ -32,14 +32,15 @@ const panes = [
 ];
 
 const Auth = () => {
-
   return (
     <div className="auth">
-      <Link to="/" className="logoLink">
-        <Typography className="logo">{NAME}</Typography>
-      </Link>
-      <div className="formBody">
-        <Tab panes={panes} defaultActiveIndex={1} />
+      <div>
+        <Link to="/" className="logoLink">
+          <Typography className="logo">{NAME}</Typography>
+        </Link>
+        <div className="formBody">
+          <Tab panes={panes} defaultActiveIndex={1} />
+        </div>
       </div>
     </div>
   );
