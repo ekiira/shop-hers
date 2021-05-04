@@ -142,6 +142,16 @@ const useStyles = makeStyles((theme) =>
         paddingLeft: 0,
       },
     },
+    nav_link: {
+      color: "#ffffff",
+      transition: "0.2s all ease-in",
+
+      "&:hover": {
+        color: "#ffffff",
+        fontSize: "18px",
+        textDecoration: "underline",
+      },
+    },
     end: {
       justifyContent: "flex-end",
     },
@@ -188,7 +198,7 @@ const Header = ({ isOpen, setIsOpen }) => {
             </div>
 
             <div>
-              <Link to="/login">
+              <Link to="/login" style={{color: '#fff'}}>
                 <IconButton
                   aria-label="account of current user"
                   aria-haspopup="true"
@@ -223,31 +233,47 @@ const Header = ({ isOpen, setIsOpen }) => {
           <Toolbar className={classes.nav}>
             <ul className={classes.navLists}>
               <li className={classes.navList}>
-                <Link to="/shop">New In</Link>
+                <Link to="/shop" className={classes.nav_link}>
+                  New In
+                </Link>
               </li>
               <li className={classes.navList}>
-                <Link to="/shop/clothing">Clothing</Link>
+                <Link to="/shop/clothing" className={classes.nav_link}>
+                  Clothing
+                </Link>
               </li>
               <li className={classes.navList}>
-                <Link to="/shop/shoes">Shoes</Link>
+                <Link to="/shop/shoes" className={classes.nav_link}>
+                  Shoes
+                </Link>
               </li>
               <li className={classes.navList}>
-                <Link to="/shop/bags">Bags</Link>
+                <Link to="/shop/bags" className={classes.nav_link}>
+                  Bags
+                </Link>
               </li>
               <li className={classes.navList}>
-                <Link to="/shop/hats">Hats</Link>
+                <Link to="/shop/hats" className={classes.nav_link}>
+                  Hats
+                </Link>
               </li>
               <li className={classes.navList}>
-                <Link to="/shop/accessories">Accessories</Link>
+                <Link to="/shop/accessories" className={classes.nav_link}>
+                  Accessories
+                </Link>
               </li>
             </ul>
 
             <ul className={`${classes.navLists} ${classes.end}`}>
               <li className={classes.navList}>
-                <Link to="/">Blog</Link>
+                <Link to="/" className={classes.nav_link}>
+                  Blog
+                </Link>
               </li>
               <li className={classes.navList}>
-                <Link to="/">Flag</Link>
+                <Link to="/" className={classes.nav_link}>
+                  Flag
+                </Link>
               </li>
             </ul>
           </Toolbar>
