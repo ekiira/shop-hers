@@ -129,8 +129,14 @@ const Footer = () => {
               <li>
                 <Link to="#" className={classes.links}>
                   <TwitterIcon className="mr3" />
+                </Link>
+                <Link to="#" className={classes.links}>
                   <InstagramIcon className="mr3" />
+                </Link>
+                <Link to="#" className={classes.links}>
                   <FacebookIcon className="mr3" />
+                </Link>
+                <Link to="#" className={classes.links}>
                   <PinterestIcon />
                 </Link>
               </li>
