@@ -9,7 +9,7 @@ import "semantic-ui-css/semantic.min.css";
 
 import "../../base-styles/styles.scss";
 import Typography from "@material-ui/core/Typography";
-import { NAME } from "../../constants/variables";
+import { NAME } from "../../utils/variables";
 const panes = [
   {
     menuItem: "Don't have an account?",

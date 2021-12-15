@@ -9,7 +9,7 @@ import Box from "@material-ui/core/Box";
 import herModel1 from "../../assets/her1.jpeg";
 import herModel2 from "../../assets/her2.jpeg";
 import herModel3 from "../../assets/her3.jpeg";
-import { NAME } from "../../constants/variables";
+import { NAME } from "../utils/variables";
 
 import "./landing.scss";
 

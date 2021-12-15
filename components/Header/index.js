@@ -12,7 +12,7 @@ import Badge from "@material-ui/core/Badge";
 import { Menu, AccountCircle, ShoppingCartOutlined } from "@material-ui/icons";
 
 import "../../base-styles/styles.scss";
-import { NAME } from "../../constants/variables";
+import { NAME } from "../../utils/variables";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
