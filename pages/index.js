@@ -1,58 +1,64 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 
-import herModel1 from "../../assets/her1.jpeg";
-import herModel2 from "../../assets/her2.jpeg";
-import herModel3 from "../../assets/her3.jpeg";
 import { NAME } from "../utils/variables";
 
-import "./landing.scss";
+import styles from "../styles/landing.module.scss";
 
 const Landing = () => {
   return (
-    <div className="landing">
-      <Box display={{ xs: 'none', lg: 'block' }}>
-      <Grid container >
-        <Grid item xs={4}>
-          <img src={herModel2} className="image" alt="model" />
+    <div className={`${styles.wrapper}`}>
+      <div className={styles.d_view}>
+        <Grid container>
+          <Grid item xs={4}>
+            <img
+              src="images/her1.jpeg"
+              className={`${styles.image}`}
+              alt="model"
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <img
+              src="images/her2.jpeg"
+              className={`${styles.image}`}
+              alt="model"
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <img
+              src="images/her3.jpeg"
+              className={`${styles.image}`}
+              alt="model"
+            />
+          </Grid>
         </Grid>
-        <Grid item xs={4}>
-          <img src={herModel1} className="image" alt="model" />
+      </div>
+
+      <div className={styles.m_view}>
+        <Grid container>
+          <Grid item xs={12}>
+            <img
+              src="images/her2.jpeg"
+              className={`${styles.image}`}
+              alt="model"
+            />
+          </Grid>
         </Grid>
-        <Grid item xs={4}>
-          <img src={herModel3} className="image" alt="model" />
-        </Grid>
-      </Grid>
-      
-      </Box>
-        <Box display={{ xs: 'block', lg: 'none' }}>
-      <Grid container >
-        <Grid item xs={12}>
-          <img src={herModel2} className="image" alt="model" />
-        </Grid>
-        {/* <Grid item xs={4}>
-          <img src={herModel1} className="image" alt="model" />
-        </Grid>
-        <Grid item xs={4}>
-          <img src={herModel3} className="image" alt="model" />
-        </Grid> */}
-      </Grid>
-      
-      </Box>
-      <div className="shop">
-        <Typography className="shopname" variant="h6">
-          <Link to="/" className="shopname">
+      </div>
+
+      <div className={styles.shop}>
+        <Typography className={styles.shopname} variant="h6">
+          <Link href="/" className={styles.shopname}>
             {NAME}
           </Link>
         </Typography>
       </div>
-      <div className="bto">
-        <Link to="/shop">
+      <div className={styles.bto}>
+        <Link href="/">
           <Button>Shop</Button>
         </Link>
       </div>

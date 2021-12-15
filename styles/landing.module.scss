@@ -1,0 +1,78 @@
+@import "./variable.scss";
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.d_view {
+  height: 100%;
+  display: block;
+}
+
+.m_view {
+  display: none;
+}
+
+.image {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.shop {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.shopname a {
+  font-size: 3.75rem;
+  color: white;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.bto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.bto {
+  button {
+    color: $primaryColor;
+    font-size: 1.5625rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: white;
+    border: 2px solid $primaryColor;
+    border-radius: 0;
+    width: 9.375rem;
+    height: 3.125rem;
+
+    &:hover {
+      color: white;
+      background-color: $primaryColor;
+      border: 2px solid $primaryColor;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .d_view {
+    display: none;
+  }
+
+  .m_view {
+    display: block;
+  }
+
+  .shopname a {
+    font-size: 2.75rem;
+  }
+}
