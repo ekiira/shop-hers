@@ -12,7 +12,7 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import PinterestIcon from "@material-ui/icons/Pinterest";
 
-import { NAME } from "../../constants/variables";
+import { NAME } from "../../utils/variables";
 import "../../base-styles/styles.scss";
 
 const useStyles = makeStyles({
