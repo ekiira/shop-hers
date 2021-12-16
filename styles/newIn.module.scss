@@ -8,26 +8,26 @@
 }
 
 .sport {
-  background: url("../../assets/sport.jpeg") no-repeat;
+  background: url("/images/sport.jpeg") no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.sport-head {
+.sport_head {
   font-weight: bold;
   background-color: #ffffff;
 }
 
-.sport-title {
+.sport_title {
   font-size: 2rem !important;
 }
 
-.sport-subtitle {
+.sport_subtitle {
   font-size: 2rem;
 }
 
 .sales {
-  background: url("../../assets/wallpaper.jpeg") no-repeat;
+  background: url("/images/wallpaper.jpeg") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -48,35 +48,35 @@
   opacity: 0.7;
 }
 
-.sales-s {
+.sales_s {
   position: relative;
   z-index: 100;
 }
 
-.sales-head {
+.sales_head {
   font-size: 3rem;
   font-weight: bold;
   color: #ffffff;
 }
 
-.sales-title {
+.sales_title {
   font-size: 1rem !important;
 }
 
-.gift-link {
+.gift_link {
   color: #666666;
   font-size: 1.5rem;
 }
 
-.gift-link:hover {
+.gift_link:hover {
   color: #000000;
 }
 
-.category-content {
+.category_content {
   position: relative;
 }
 
-.category-content .image-overlay {
+.image_overlay {
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
   height: 100%;
@@ -91,11 +91,11 @@
   transition: all 0.4s ease-in-out 0s;
 }
 
-.category-content:hover .image-overlay {
+.image_overlay {
   opacity: 1;
 }
 
-.category-details {
+.category_details {
   position: absolute;
   text-align: center;
   padding-left: 1em;
@@ -112,13 +112,13 @@
   transition: all 0.3s ease-in-out 0s;
 }
 
-.category-content:hover .category-details {
+.category_content:hover .category_details {
   top: 50%;
   left: 50%;
   opacity: 1;
 }
 
-.category-details {
+.category_details {
   color: #fff;
   font-weight: 500;
   letter-spacing: 0.15em;
@@ -126,6 +126,6 @@
   text-transform: uppercase;
 }
 
-.fadeIn-top {
+.fadeIn_top {
   top: 20%;
 }

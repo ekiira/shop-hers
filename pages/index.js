@@ -58,7 +58,7 @@ const Landing = () => {
         </Typography>
       </div>
       <div className={styles.bto}>
-        <Link href="/">
+        <Link href="/shop/newin">
           <Button>Shop</Button>
         </Link>
       </div>
