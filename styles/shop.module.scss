@@ -91,8 +91,9 @@
   transition: all 0.4s ease-in-out 0s;
 }
 
-.image_overlay {
+.category_content:hover .image_overlay {
   opacity: 1;
+  z-index: 1;
 }
 
 .category_details {
@@ -112,10 +113,15 @@
   transition: all 0.3s ease-in-out 0s;
 }
 
+.category_content {
+  height: 200px;
+}
+
 .category_content:hover .category_details {
   top: 50%;
   left: 50%;
   opacity: 1;
+  z-index: 2;
 }
 
 .category_details {
