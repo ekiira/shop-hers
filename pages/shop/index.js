@@ -1,5 +1,5 @@
-import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
@@ -9,8 +9,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
 // style
-import styles from "../../styles/newIn.module.scss";
-// import "../../base-styles/styles.scss";
+import styles from "../../styles/shop.module.scss";
 
 const NewIn = () => {
   return (
@@ -23,8 +22,16 @@ const NewIn = () => {
               <Link href="/shop/shoes">
                 <div className={styles.image_overlay}></div>
               </Link>
-              <img src="/images/shoes/airforce.jpeg" className="img-resp" alt="shoe" />
-              <div className={`${styles.category_details} ${styles.fadeIn_top}`}>
+              <div className="relative">
+                <Image
+                  src="/images/shoes/airforce.jpeg"
+                  alt="shoe"
+                  layout="fill"
+                />
+              </div>
+              <div
+                className={`${styles.category_details} ${styles.fadeIn_top}`}
+              >
                 <p>Shop Shoes</p>
               </div>
             </div>
@@ -35,8 +42,16 @@ const NewIn = () => {
               <Link href="/shop/clothing">
                 <div className={styles.image_overlay}></div>
               </Link>
-              <img src="/images/clothing/shirt1.jpeg" className="img-resp" alt="cloth" />
-              <div className={`${styles.category_details} ${styles.fadeIn_top}`}>
+              <div className="relative">
+                <Image
+                  src="/images/clothing/shirt1.jpeg"
+                  alt="cloth"
+                  layout="fill"
+                />
+              </div>
+              <div
+                className={`${styles.category_details} ${styles.fadeIn_top}`}
+              >
                 <p>Shop Clothing</p>
               </div>
             </div>
@@ -47,8 +62,13 @@ const NewIn = () => {
               <Link href="/shop/bags">
                 <div className={styles.image_overlay}></div>
               </Link>
-              <img src="/images/bags/bag1.jpeg" className="img-resp" alt="bag" />
-              <div className={`${styles.category_details} ${styles.fadeIn_top}`}>
+              <div className="relative">
+                <Image src="/images/bags/bag1.jpeg" alt="bag" layout="fill" />
+              </div>
+
+              <div
+                className={`${styles.category_details} ${styles.fadeIn_top}`}
+              >
                 <p>Shop Bags</p>
               </div>
             </div>
@@ -59,8 +79,12 @@ const NewIn = () => {
               <Link href="/shop/hats">
                 <div className={styles.image_overlay}></div>
               </Link>
-              <img src='/images/hats/hat3.jpeg' className="img-resp" alt="hat" />
-              <div className={`${styles.category_details} ${styles.fadeIn_top}`}>
+              <div className="relative">
+                <Image src="/images/hats/hat3.jpeg" alt="hat" layout="fill" />
+              </div>
+              <div
+                className={`${styles.category_details} ${styles.fadeIn_top}`}
+              >
                 <p>Shop Hats</p>
               </div>
             </div>
@@ -71,15 +95,27 @@ const NewIn = () => {
         <h3 className="fweight-bold pb0">New Arrivals</h3>
         <Grid container spacing={2}>
           <Grid item xs={4} className="pt4">
-            <img src='/images/shoes/heel4.jpeg' className="img-resp" alt="shoe" />
+            <img
+              src="/images/shoes/heel4.jpeg"
+              className="img-resp"
+              alt="shoe"
+            />
           </Grid>
 
           <Grid item xs={4} className="pt4">
-            <img src='/images/clothing/cl3.jpeg' className="img-resp" alt="cloth" />
+            <img
+              src="/images/clothing/cl3.jpeg"
+              className="img-resp"
+              alt="cloth"
+            />
           </Grid>
 
           <Grid item xs={4} className="pt4">
-            <img src='/images/clothing/cl4.jpeg' className="img-resp" alt="cloth" />
+            <img
+              src="/images/clothing/cl4.jpeg"
+              className="img-resp"
+              alt="cloth"
+            />
           </Grid>
         </Grid>
       </Container>
@@ -89,11 +125,17 @@ const NewIn = () => {
           <div className={`${styles.overlay} pt5 pb5`}>
             <Container fixed>
               <div className={`${styles.sales_s}`}>
-                <p className={`${styles.sales_head} center p3 mb0`}>SALES SALES SALES</p>
+                <p className={`${styles.sales_head} center p3 mb0`}>
+                  SALES SALES SALES
+                </p>
                 <Grid container spacing={2}>
                   <Grid item xs={6} md={2} className="pt4 pb4">
                     <Card>
-                      <img className="img-resp" src='/images/sales/sdress.jpeg' alt="dress" />
+                      <img
+                        className="img-resp"
+                        src="/images/sales/sdress.jpeg"
+                        alt="dress"
+                      />
 
                       <CardHeader
                         title="Dresses"
@@ -104,7 +146,11 @@ const NewIn = () => {
 
                   <Grid item xs={6} md={2} className="pt4 pb4">
                     <Card>
-                      <img className="img-resp" src='/images/sales/sshoe.jpeg' alt="shoe" />
+                      <img
+                        className="img-resp"
+                        src="/images/sales/sshoe.jpeg"
+                        alt="shoe"
+                      />
 
                       <CardHeader
                         title="Shoes"
@@ -114,7 +160,11 @@ const NewIn = () => {
                   </Grid>
                   <Grid item xs={6} md={2} className="pt4 pb4">
                     <Card>
-                      <img className="img-resp" src='/images/sales/scoat.jpeg' alt="coat" />
+                      <img
+                        className="img-resp"
+                        src="/images/sales/scoat.jpeg"
+                        alt="coat"
+                      />
 
                       <CardHeader
                         title="Coats"
@@ -125,7 +175,11 @@ const NewIn = () => {
 
                   <Grid item xs={6} md={2} className="pt4 pb4">
                     <Card>
-                      <img className="img-resp" src='/images/sales/strouser.jpeg' alt="Trouser" />
+                      <img
+                        className="img-resp"
+                        src="/images/sales/strouser.jpeg"
+                        alt="Trouser"
+                      />
 
                       <CardHeader
                         title="Trousers"
@@ -136,7 +190,11 @@ const NewIn = () => {
 
                   <Grid item xs={6} md={2} className="pt4 pb4">
                     <Card>
-                      <img className="img-resp" src='/images/sales/sbag.jpeg' alt="Bag" />
+                      <img
+                        className="img-resp"
+                        src="/images/sales/sbag.jpeg"
+                        alt="Bag"
+                      />
 
                       <CardHeader
                         title="Bags"
@@ -147,7 +205,11 @@ const NewIn = () => {
 
                   <Grid item xs={6} md={2} className="pt4 pb4">
                     <Card>
-                      <img className="img-resp" src='/images/sales/shat.jpeg' alt="Hat" />
+                      <img
+                        className="img-resp"
+                        src="/images/sales/shat.jpeg"
+                        alt="Hat"
+                      />
 
                       <CardHeader
                         title="Hats"
@@ -164,10 +226,12 @@ const NewIn = () => {
 
       <div className="pt5 pb5">
         <div className={styles.sport}>
-          <Container maxWidth='sm' className="pt5 pb5 auto-flex">
+          <Container maxWidth="sm" className="pt5 pb5 auto-flex">
             <div>
               <div className={`${styles.sport_head} p4 center`}>
-                <Typography className={`${styles.sport_title} mb0`} noWrap>FEELING SPORTY ?</Typography>
+                <Typography className={`${styles.sport_title} mb0`} noWrap>
+                  FEELING SPORTY ?
+                </Typography>
                 <br />
                 <p className={`${styles.sport_subtitle} mb0`}>
                   Introducing our varieties of sport gears
@@ -186,16 +250,32 @@ const NewIn = () => {
           <h3 className="fweight-bold">Check out our Gift Packs</h3>
           <Grid container spacing={2} className="pt3">
             <Grid item xs={6} lg={3} className="pt4">
-              <img src='/images/gifts/gift1.jpeg' className="img-resp" alt="gift-item" />
+              <img
+                src="/images/gifts/gift1.jpeg"
+                className="img-resp"
+                alt="gift-item"
+              />
             </Grid>
             <Grid item xs={6} lg={3} className="pt4">
-              <img src='/images/gifts/gift2.jpeg' className="img-resp" alt="gift-item" />
+              <img
+                src="/images/gifts/gift2.jpeg"
+                className="img-resp"
+                alt="gift-item"
+              />
             </Grid>
             <Grid item xs={6} lg={3} className="pt4">
-              <img src='/images/gifts/gift3.jpeg' className="img-resp" alt="gift-item" />
+              <img
+                src="/images/gifts/gift3.jpeg"
+                className="img-resp"
+                alt="gift-item"
+              />
             </Grid>
             <Grid item xs={6} lg={3} className="pt4">
-              <img src='/images/gifts/gift4.jpeg' className="img-resp" alt="gift-item" />
+              <img
+                src="/images/gifts/gift4.jpeg"
+                className="img-resp"
+                alt="gift-item"
+              />
             </Grid>
           </Grid>
           <div className="pt3 center">
