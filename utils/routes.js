@@ -1,9 +1,9 @@
-import Shop from "./views/NewIn";
-import Clothing from "./views/Clothing";
-import Shoes from "./views/Shoes";
-import Bags from "./views/Bags";
-import Hats from "./views/Hats";
-import Accessories from "./views/Accessories";
+import Shop from "../pages/shop";
+import Clothing from "../pages/shop/clothing";
+import Shoes from "../pages/shop/shoes";
+import Bags from "../pages/shop/bags";
+import Hats from "../pages/shop/hats";
+import Accessories from "../pages/shop/accessories";
 
 export const Routes = [
   {

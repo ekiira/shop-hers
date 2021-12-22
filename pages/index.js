@@ -16,17 +16,35 @@ const Landing = () => {
         <Grid container>
           <Grid item xs={4}>
             <div className={`${styles.image} relative`}>
-              <Image src="/images/her1.jpeg" layout="fill" alt="model" />
+              <Image
+                src="/images/her1.jpeg"
+                layout="fill"
+                alt="model"
+                placeholder="blur"
+                blurDataURL="/images/her1.jpeg"
+              />
             </div>
           </Grid>
           <Grid item xs={4}>
             <div className={`${styles.image} relative`}>
-              <Image src="/images/her2.jpeg" layout="fill" alt="model" />
+              <Image
+                src="/images/her2.jpeg"
+                layout="fill"
+                alt="model"
+                placeholder="blur"
+                blurDataURL="/images/her2.jpeg"
+              />
             </div>
           </Grid>
           <Grid item xs={4}>
             <div className={`${styles.image} relative`}>
-              <Image src="/images/her3.jpeg" layout="fill" alt="model" />
+              <Image
+                src="/images/her3.jpeg"
+                layout="fill"
+                alt="model"
+                placeholder="blur"
+                blurDataURL="/images/her3.jpeg"
+              />
             </div>
           </Grid>
         </Grid>
@@ -36,7 +54,7 @@ const Landing = () => {
         <Grid container>
           <Grid item xs={12}>
             <div className={`${styles.image} relative`}>
-              <Image src="images/her2.jpeg" alt="model" />
+              <Image src="/images/her2.jpeg" layout="fill" alt="model" />
             </div>
           </Grid>
         </Grid>

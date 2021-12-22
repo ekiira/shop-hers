@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// import Layout from '../../components/Layout'
+
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
@@ -13,6 +15,8 @@ import styles from "../../styles/shop.module.scss";
 
 const NewIn = () => {
   return (
+    // <Layout>
+
     <div className="pt5 pb5">
       <Container fixed className="pb5">
         <h3 className="fweight-bold pb0">Shop By Category</h3>
@@ -95,27 +99,29 @@ const NewIn = () => {
         <h3 className="fweight-bold pb0">New Arrivals</h3>
         <Grid container spacing={2}>
           <Grid item xs={4} className="pt4">
-            <img
-              src="/images/shoes/heel4.jpeg"
-              className="img-resp"
-              alt="shoe"
-            />
+            <div className={`relative ${styles.new_image}`}>
+              <Image src="/images/shoes/heel4.jpeg" alt="shoe" layout="fill" />
+            </div>
           </Grid>
 
           <Grid item xs={4} className="pt4">
-            <img
-              src="/images/clothing/cl3.jpeg"
-              className="img-resp"
-              alt="cloth"
-            />
+            <div className={`relative ${styles.new_image}`}>
+              <Image
+                src="/images/clothing/cl3.jpeg"
+                alt="cloth"
+                layout="fill"
+              />
+            </div>
           </Grid>
 
           <Grid item xs={4} className="pt4">
-            <img
-              src="/images/clothing/cl4.jpeg"
-              className="img-resp"
-              alt="cloth"
-            />
+            <div className={`relative ${styles.new_image}`}>
+              <Image
+                src="/images/clothing/cl4.jpeg"
+                alt="cloth"
+                layout="fill"
+              />
+            </div>
           </Grid>
         </Grid>
       </Container>
@@ -131,11 +137,13 @@ const NewIn = () => {
                 <Grid container spacing={2}>
                   <Grid item xs={6} md={2} className="pt4 pb4">
                     <Card>
-                      <img
-                        className="img-resp"
-                        src="/images/sales/sdress.jpeg"
-                        alt="dress"
-                      />
+                      <div className={`relative ${styles.sales_image}`}>
+                        <Image
+                          src="/images/sales/sdress.jpeg"
+                          alt="dress"
+                          layout="fill"
+                        />
+                      </div>
 
                       <CardHeader
                         title="Dresses"
@@ -146,11 +154,13 @@ const NewIn = () => {
 
                   <Grid item xs={6} md={2} className="pt4 pb4">
                     <Card>
-                      <img
-                        className="img-resp"
-                        src="/images/sales/sshoe.jpeg"
-                        alt="shoe"
-                      />
+                      <div className={`relative ${styles.sales_image}`}>
+                        <Image
+                          src="/images/sales/sshoe.jpeg"
+                          alt="shoe"
+                          layout="fill"
+                        />
+                      </div>
 
                       <CardHeader
                         title="Shoes"
@@ -160,11 +170,13 @@ const NewIn = () => {
                   </Grid>
                   <Grid item xs={6} md={2} className="pt4 pb4">
                     <Card>
-                      <img
-                        className="img-resp"
-                        src="/images/sales/scoat.jpeg"
-                        alt="coat"
-                      />
+                      <div className={`relative ${styles.sales_image}`}>
+                        <Image
+                          src="/images/sales/scoat.jpeg"
+                          alt="coat"
+                          layout="fill"
+                        />
+                      </div>
 
                       <CardHeader
                         title="Coats"
@@ -175,11 +187,13 @@ const NewIn = () => {
 
                   <Grid item xs={6} md={2} className="pt4 pb4">
                     <Card>
-                      <img
-                        className="img-resp"
-                        src="/images/sales/strouser.jpeg"
-                        alt="Trouser"
-                      />
+                      <div className={`relative ${styles.sales_image}`}>
+                        <Image
+                          src="/images/sales/strouser.jpeg"
+                          layout="fill"
+                          alt="Trouser"
+                        />
+                      </div>
 
                       <CardHeader
                         title="Trousers"
@@ -190,11 +204,13 @@ const NewIn = () => {
 
                   <Grid item xs={6} md={2} className="pt4 pb4">
                     <Card>
-                      <img
-                        className="img-resp"
-                        src="/images/sales/sbag.jpeg"
-                        alt="Bag"
-                      />
+                      <div className={`relative ${styles.sales_image}`}>
+                        <Image
+                          src="/images/sales/sbag.jpeg"
+                          layout="fill"
+                          alt="Bag"
+                        />
+                      </div>
 
                       <CardHeader
                         title="Bags"
@@ -205,11 +221,13 @@ const NewIn = () => {
 
                   <Grid item xs={6} md={2} className="pt4 pb4">
                     <Card>
-                      <img
-                        className="img-resp"
-                        src="/images/sales/shat.jpeg"
-                        alt="Hat"
-                      />
+                      <div className={`relative ${styles.sales_image}`}>
+                        <Image
+                          src="/images/sales/shat.jpeg"
+                          layout="fill"
+                          alt="Hat"
+                        />
+                      </div>
 
                       <CardHeader
                         title="Hats"
@@ -250,32 +268,40 @@ const NewIn = () => {
           <h3 className="fweight-bold">Check out our Gift Packs</h3>
           <Grid container spacing={2} className="pt3">
             <Grid item xs={6} lg={3} className="pt4">
-              <img
-                src="/images/gifts/gift1.jpeg"
-                className="img-resp"
-                alt="gift-item"
-              />
+              <div className={`relative ${styles.gift_image}`}>
+                <Image
+                  src="/images/gifts/gift1.jpeg"
+                  alt="gift-item"
+                  layout="fill"
+                />
+              </div>
             </Grid>
             <Grid item xs={6} lg={3} className="pt4">
-              <img
-                src="/images/gifts/gift2.jpeg"
-                className="img-resp"
-                alt="gift-item"
-              />
+              <div className={`relative ${styles.gift_image}`}>
+                <Image
+                  src="/images/gifts/gift2.jpeg"
+                  alt="gift-item"
+                  layout="fill"
+                />
+              </div>
             </Grid>
             <Grid item xs={6} lg={3} className="pt4">
-              <img
-                src="/images/gifts/gift3.jpeg"
-                className="img-resp"
-                alt="gift-item"
-              />
+              <div className={`relative ${styles.gift_image}`}>
+                <Image
+                  src="/images/gifts/gift3.jpeg"
+                  alt="gift-item"
+                  layout="fill"
+                />
+              </div>
             </Grid>
             <Grid item xs={6} lg={3} className="pt4">
-              <img
-                src="/images/gifts/gift4.jpeg"
-                className="img-resp"
-                alt="gift-item"
-              />
+              <div className={`relative ${styles.gift_image}`}>
+                <Image
+                  src="/images/gifts/gift4.jpeg"
+                  alt="gift-item"
+                  layout="fill"
+                />
+              </div>
             </Grid>
           </Grid>
           <div className="pt3 center">
@@ -286,6 +312,8 @@ const NewIn = () => {
         </Container>
       </div>
     </div>
+    /* </Layout> */
+
   );
 };
 
