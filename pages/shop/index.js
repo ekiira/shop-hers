@@ -10,13 +10,10 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
-// style
 import styles from "../../styles/shop.module.scss";
 
 const NewIn = () => {
   return (
-    // <Layout>
-
     <div className="pt5 pb5">
       <Container fixed className="pb5">
         <h3 className="fweight-bold pb0">Shop By Category</h3>
@@ -98,13 +95,13 @@ const NewIn = () => {
       <Container fixed className="pb5">
         <h3 className="fweight-bold pb0">New Arrivals</h3>
         <Grid container spacing={2}>
-          <Grid item xs={4} className="pt4">
+          <Grid item xs={12} md={4} className="pt4">
             <div className={`relative ${styles.new_image}`}>
               <Image src="/images/shoes/heel4.jpeg" alt="shoe" layout="fill" />
             </div>
           </Grid>
 
-          <Grid item xs={4} className="pt4">
+          <Grid item xs={12} md={4} className="pt4">
             <div className={`relative ${styles.new_image}`}>
               <Image
                 src="/images/clothing/cl3.jpeg"
@@ -114,7 +111,7 @@ const NewIn = () => {
             </div>
           </Grid>
 
-          <Grid item xs={4} className="pt4">
+          <Grid item xs={12} md={4} className="pt4">
             <div className={`relative ${styles.new_image}`}>
               <Image
                 src="/images/clothing/cl4.jpeg"
@@ -312,8 +309,6 @@ const NewIn = () => {
         </Container>
       </div>
     </div>
-    /* </Layout> */
-
   );
 };
 

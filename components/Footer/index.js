@@ -60,21 +60,21 @@ const Footer = () => {
             <Grid item xs={6} md={3}>
               <p className={classes.title}>Help and Information</p>
               <li>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <MUILink variant="body1" className={classes.links}>
                     Help
                   </MUILink>
                 </Link>
               </li>
               <li>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <MUILink variant="body1" className={classes.links}>
                     Track Order
                   </MUILink>
                 </Link>
               </li>
               <li>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <MUILink variant="body1" className={classes.links}>
                     Delivery Returns
                   </MUILink>
@@ -84,21 +84,21 @@ const Footer = () => {
             <Grid item xs={6} md={3}>
               <p className={classes.title}>About Shoppers</p>
               <li>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <MUILink variant="body1" className={classes.links}>
                     About Us
                   </MUILink>
                 </Link>
               </li>
               <li>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <MUILink variant="body1" className={classes.links}>
                     {`Careers at ${NAME}`}
                   </MUILink>
                 </Link>
               </li>
               <li>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <MUILink variant="body1" className={classes.links}>
                     Corporate Responsibility
                   </MUILink>
@@ -116,28 +116,28 @@ const Footer = () => {
               <li>
                 <p className={classes.title}>More from Shoppers</p>
 
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <MUILink variant="body1" className={classes.links}>
                     {`Mobile ans ${NAME} Apps`}
                   </MUILink>
                 </Link>
               </li>
               <li>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <MUILink variant="body1" className={classes.links}>
                     {`${NAME} Marketplace`}
                   </MUILink>
                 </Link>
               </li>
               <li>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <MUILink variant="body1" className={classes.links}>
                     Gift vouchers
                   </MUILink>
                 </Link>
               </li>
               <li>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <MUILink variant="body1" className={classes.links}>
                     Fashion Discovery
                   </MUILink>
@@ -148,16 +148,16 @@ const Footer = () => {
               <p className={classes.title}>Socials</p>
 
               <li>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <TwitterIcon className="mr3" />
                 </Link>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <InstagramIcon className="mr3" />
                 </Link>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <FacebookIcon className="mr3" />
                 </Link>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <PinterestIcon />
                 </Link>
               </li>

@@ -277,14 +277,14 @@ const Header = ({ isOpen, setIsOpen }) => {
 
             <ul className={`${classes.navLists} ${classes.end}`}>
               <li className={classes.navList}>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <MUILink variant="body1" className={classes.nav_link}>
                     Blog
                   </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
-                <Link href="/" passHref>
+                <Link href="#" passHref>
                   <MUILink variant="body1" className={classes.nav_link}>
                     Flag
                   </MUILink>
