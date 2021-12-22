@@ -1,15 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Tab } from "semantic-ui-react";
 import Login from "./Login";
-import "./auth.scss";
 import SignUp from "./SignUp";
 
 import "semantic-ui-css/semantic.min.css";
 
-import "../../base-styles/styles.scss";
 import Typography from "@material-ui/core/Typography";
 import { NAME } from "../../utils/variables";
+
+import styles from "../../styles/auth.module.scss";
+
 const panes = [
   {
     menuItem: "Don't have an account?",
@@ -33,12 +33,12 @@ const panes = [
 
 const Auth = () => {
   return (
-    <div className="auth">
+    <div className={styles.auth}>
       <div>
-        <Link to="/" className="logoLink">
-          <Typography className="logo">{NAME}</Typography>
+        <Link href="/" className={styles.logoLink}>
+          <Typography className={styles.logo}>{NAME}</Typography>
         </Link>
-        <div className="formBody">
+        <div className={styles.formBody}>
           <Tab panes={panes} defaultActiveIndex={1} />
         </div>
       </div>
