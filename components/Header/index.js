@@ -233,42 +233,42 @@ const Header = ({ isOpen, setIsOpen }) => {
             <ul className={classes.navLists}>
               <li className={classes.navList}>
                 <Link href="/shop" passHref>
-                  <MUILink variant="body" className={classes.nav_link}>
+                  <MUILink variant="body1" className={classes.nav_link}>
                     New In
                   </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
                 <Link href="/shop/clothing" passHref>
-                  <MUILink variant="body" className={classes.nav_link}>
+                  <MUILink variant="body1" className={classes.nav_link}>
                     Clothing
                   </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
                 <Link href="/shop/shoes" passHref>
-                  <MUILink variant="body" className={classes.nav_link}>
+                  <MUILink variant="body1" className={classes.nav_link}>
                     Shoes
                   </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
                 <Link href="/shop/bags" passHref>
-                  <MUILink variant="body" className={classes.nav_link}>
+                  <MUILink variant="body1" className={classes.nav_link}>
                     Bags
                   </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
                 <Link href="/shop/hats" passHref>
-                  <MUILink variant="body" className={classes.nav_link}>
+                  <MUILink variant="body1" className={classes.nav_link}>
                     Hats
                   </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
                 <Link href="/shop/accessories" passHref>
-                  <MUILink variant="body" className={classes.nav_link}>
+                  <MUILink variant="body1" className={classes.nav_link}>
                     Accessories
                   </MUILink>
                 </Link>
@@ -278,14 +278,14 @@ const Header = ({ isOpen, setIsOpen }) => {
             <ul className={`${classes.navLists} ${classes.end}`}>
               <li className={classes.navList}>
                 <Link href="/" passHref>
-                  <MUILink variant="body" className={classes.nav_link}>
+                  <MUILink variant="body1" className={classes.nav_link}>
                     Blog
                   </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
                 <Link href="/" passHref>
-                  <MUILink variant="body" className={classes.nav_link}>
+                  <MUILink variant="body1" className={classes.nav_link}>
                     Flag
                   </MUILink>
                 </Link>

@@ -25,7 +25,7 @@ const Login = () => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    console.log(loginData);
+    // console.log(loginData);
     clearState();
   };
 

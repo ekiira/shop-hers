@@ -30,7 +30,7 @@ const SignUp = () => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    console.log(signupData);
+    // console.log(signupData);
     clearState();
   };
 
