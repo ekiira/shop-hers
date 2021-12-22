@@ -53,7 +53,7 @@ const useStyles = makeStyles({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div>
       <Box className={`${classes.top} pt5 pb5`}>
         <Container fixed className={classes.links}>
           <Grid container spacing={2}>
