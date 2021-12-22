@@ -197,7 +197,7 @@ const Header = ({ isOpen, setIsOpen }) => {
             </div>
 
             <div>
-              <Link href="/login" passHref>
+              <Link href="/auth" passHref>
                 <IconButton
                   aria-label="account of current user"
                   aria-haspopup="true"
