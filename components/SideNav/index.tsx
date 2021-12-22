@@ -50,44 +50,44 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           <div className={classes.menuList}>
             <Divider />
             <div className="p2">
-              <Link href="/shop" onClick={() => setIsOpen(!isOpen)}>
+              <Link href="/shop">
                 <MenuList>New In</MenuList>
               </Link>
             </div>
             <Divider />
             <div className="p2">
-              <Link href="/shop/clothing" onClick={() => setIsOpen(!isOpen)}>
+              <Link href="/shop/clothing">
                 <MenuList>Clothing</MenuList>
               </Link>
             </div>
             <Divider />
             <div className="p2">
-              <Link href="/shop/bags" onClick={() => setIsOpen(!isOpen)}>
+              <Link href="/shop/bags">
                 <MenuList>Bags</MenuList>
               </Link>
             </div>
             <Divider />
             <div className="p2">
-              <Link href="/shop/shoes" onClick={() => setIsOpen(!isOpen)}>
+              <Link href="/shop/shoes">
                 <MenuList>Shoes</MenuList>
               </Link>
             </div>
             <Divider />
             <div className="p2">
-              <Link href="/shop/hats" onClick={() => setIsOpen(!isOpen)}>
+              <Link href="/shop/hats">
                 <MenuList>Hats</MenuList>
               </Link>
             </div>
             <Divider />
             <div className="p2">
-              <Link href="/shop/accessories" onClick={() => setIsOpen(!isOpen)}>
+              <Link href="/shop/accessories">
                 <MenuList>Accessories</MenuList>
               </Link>
             </div>
             <Divider />
 
             <div className="p2">
-              <Link href="/blog" onClick={() => setIsOpen(!isOpen)}>
+              <Link href="/blog">
                 <MenuList>Blog</MenuList>
               </Link>
             </div>

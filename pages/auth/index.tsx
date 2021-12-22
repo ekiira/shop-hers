@@ -35,7 +35,7 @@ const Auth = () => {
   return (
     <div className={styles.auth}>
       <div>
-        <Link href="/" className={styles.logoLink}>
+        <Link href="/">
           <Typography className={styles.logo}>{NAME}</Typography>
         </Link>
         <div className={styles.formBody}>
