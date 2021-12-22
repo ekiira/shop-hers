@@ -1,17 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 import { createStyles, makeStyles, fade } from "@material-ui/core/styles";
+import { Link as MUILink } from "@material-ui/core";
+
 import SearchIcon from "@material-ui/icons/Search";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import InputBase from "@material-ui/core/InputBase";
 import Badge from "@material-ui/core/Badge";
+
 import { Menu, AccountCircle, ShoppingCartOutlined } from "@material-ui/icons";
 
-import "../../base-styles/styles.scss";
 import { NAME } from "../../utils/variables";
 
 const useStyles = makeStyles((theme) =>
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) =>
     menuButton: {
       marginRight: theme.spacing(1),
       display: "none",
-      [theme.breakpoints.down("xs")]: {
+      [theme.breakpoints.up("xs")]: {
         display: "flex",
       },
     },
@@ -118,7 +118,7 @@ const useStyles = makeStyles((theme) =>
       width: "100%",
     },
     nav: {
-      width: "100%",
+      width: "auto",
       display: "none",
       [theme.breakpoints.up("sm")]: {
         display: "flex",
@@ -148,7 +148,6 @@ const useStyles = makeStyles((theme) =>
 
       "&:hover": {
         color: "#ffffff",
-        fontSize: "18px",
         textDecoration: "underline",
       },
     },
@@ -178,11 +177,11 @@ const Header = ({ isOpen, setIsOpen }) => {
             >
               <Menu />
             </IconButton>
-            <Typography className={classes.title} variant="h6">
-              <Link to="/" className={classes.title}>
+            <Link href="/" passHref>
+              <MUILink variant="body2" className={classes.title}>
                 {NAME}
-              </Link>
-            </Typography>
+              </MUILink>
+            </Link>
             <div className={classes.searchDesktop}>
               <div className={classes.searchIcon}>
                 <SearchIcon fontSize="small" />
@@ -198,7 +197,7 @@ const Header = ({ isOpen, setIsOpen }) => {
             </div>
 
             <div>
-              <Link to="/login" style={{color: '#fff'}}>
+              <Link href="/login" passHref>
                 <IconButton
                   aria-label="account of current user"
                   aria-haspopup="true"
@@ -233,46 +232,62 @@ const Header = ({ isOpen, setIsOpen }) => {
           <Toolbar className={classes.nav}>
             <ul className={classes.navLists}>
               <li className={classes.navList}>
-                <Link to="/shop" className={classes.nav_link}>
-                  New In
+                <Link href="/shop" passHref>
+                  <MUILink variant="body" className={classes.nav_link}>
+                    New In
+                  </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
-                <Link to="/shop/clothing" className={classes.nav_link}>
-                  Clothing
+                <Link href="/shop/clothing" passHref>
+                  <MUILink variant="body" className={classes.nav_link}>
+                    Clothing
+                  </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
-                <Link to="/shop/shoes" className={classes.nav_link}>
-                  Shoes
+                <Link href="/shop/shoes" passHref>
+                  <MUILink variant="body" className={classes.nav_link}>
+                    Shoes
+                  </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
-                <Link to="/shop/bags" className={classes.nav_link}>
-                  Bags
+                <Link href="/shop/bags" passHref>
+                  <MUILink variant="body" className={classes.nav_link}>
+                    Bags
+                  </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
-                <Link to="/shop/hats" className={classes.nav_link}>
-                  Hats
+                <Link href="/shop/hats" passHref>
+                  <MUILink variant="body" className={classes.nav_link}>
+                    Hats
+                  </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
-                <Link to="/shop/accessories" className={classes.nav_link}>
-                  Accessories
+                <Link href="/shop/accessories" passHref>
+                  <MUILink variant="body" className={classes.nav_link}>
+                    Accessories
+                  </MUILink>
                 </Link>
               </li>
             </ul>
 
             <ul className={`${classes.navLists} ${classes.end}`}>
               <li className={classes.navList}>
-                <Link to="/" className={classes.nav_link}>
-                  Blog
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.nav_link}>
+                    Blog
+                  </MUILink>
                 </Link>
               </li>
               <li className={classes.navList}>
-                <Link to="/" className={classes.nav_link}>
-                  Flag
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.nav_link}>
+                    Flag
+                  </MUILink>
                 </Link>
               </li>
             </ul>

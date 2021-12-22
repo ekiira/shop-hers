@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 
 import { makeStyles } from "@material-ui/core/styles";
+import { Link as MUILink } from "@material-ui/core";
 
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -13,7 +13,6 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import PinterestIcon from "@material-ui/icons/Pinterest";
 
 import { NAME } from "../../utils/variables";
-import "../../base-styles/styles.scss";
 
 const useStyles = makeStyles({
   links: {
@@ -61,41 +60,55 @@ const Footer = () => {
             <Grid item xs={6} md={3}>
               <p className={classes.title}>Help and Information</p>
               <li>
-                <Link to="#" className={classes.links}>
-                  Help
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.links}>
+                    Help
+                  </MUILink>
                 </Link>
               </li>
               <li>
-                <Link to="#" className={classes.links}>
-                  Track Order
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.links}>
+                    Track Order
+                  </MUILink>
                 </Link>
               </li>
               <li>
-                <Link to="#" className={classes.links}>
-                  Delivery Returns
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.links}>
+                    Delivery Returns
+                  </MUILink>
                 </Link>
               </li>
             </Grid>
             <Grid item xs={6} md={3}>
               <p className={classes.title}>About Shoppers</p>
               <li>
-                <Link to="#" className={classes.links}>
-                  About Us
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.links}>
+                    About Us
+                  </MUILink>
                 </Link>
               </li>
               <li>
-                <Link to="#" className={classes.links}>
-                  {`Careers at ${NAME}`}
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.links}>
+                    {`Careers at ${NAME}`}
+                  </MUILink>
                 </Link>
               </li>
               <li>
-                <Link to="#" className={classes.links}>
-                  Corporate Responsibility
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.links}>
+                    Corporate Responsibility
+                  </MUILink>
                 </Link>
               </li>
               <li>
-                <Link to="#" className={classes.links}>
-                  Investors Site
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.links}>
+                    Investors Site
+                  </MUILink>
                 </Link>
               </li>
             </Grid>
@@ -103,23 +116,31 @@ const Footer = () => {
               <li>
                 <p className={classes.title}>More from Shoppers</p>
 
-                <Link to="#" className={classes.links}>
-                  {`Mobile ans ${NAME} Apps`}
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.links}>
+                    {`Mobile ans ${NAME} Apps`}
+                  </MUILink>
                 </Link>
               </li>
               <li>
-                <Link to="#" className={classes.links}>
-                  {`${NAME} Marketplace`}
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.links}>
+                    {`${NAME} Marketplace`}
+                  </MUILink>
                 </Link>
               </li>
               <li>
-                <Link to="#" className={classes.links}>
-                  Gift vouchers
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.links}>
+                    Gift vouchers
+                  </MUILink>
                 </Link>
               </li>
               <li>
-                <Link to="#" className={classes.links}>
-                  Fashion Discovery
+                <Link href="/" passHref>
+                  <MUILink variant="body" className={classes.links}>
+                    Fashion Discovery
+                  </MUILink>
                 </Link>
               </li>
             </Grid>
@@ -127,16 +148,16 @@ const Footer = () => {
               <p className={classes.title}>Socials</p>
 
               <li>
-                <Link to="#" className={classes.links}>
+                <Link href="/" passHref>
                   <TwitterIcon className="mr3" />
                 </Link>
-                <Link to="#" className={classes.links}>
+                <Link href="/" passHref>
                   <InstagramIcon className="mr3" />
                 </Link>
-                <Link to="#" className={classes.links}>
+                <Link href="/" passHref>
                   <FacebookIcon className="mr3" />
                 </Link>
-                <Link to="#" className={classes.links}>
+                <Link href="/" passHref>
                   <PinterestIcon />
                 </Link>
               </li>

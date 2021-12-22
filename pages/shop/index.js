@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// import Layout from '../../components/Layout'
+
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
@@ -13,6 +15,8 @@ import styles from "../../styles/shop.module.scss";
 
 const NewIn = () => {
   return (
+    // <Layout>
+
     <div className="pt5 pb5">
       <Container fixed className="pb5">
         <h3 className="fweight-bold pb0">Shop By Category</h3>
@@ -308,6 +312,8 @@ const NewIn = () => {
         </Container>
       </div>
     </div>
+    /* </Layout> */
+
   );
 };
 
