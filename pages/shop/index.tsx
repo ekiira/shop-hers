@@ -7,6 +7,7 @@ import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import { Link as MUILink } from "@material-ui/core";
 
 import Seo from "../../components/Seo";
 import { NAME } from "../../utils/variables";
@@ -314,8 +315,10 @@ const NewIn = () => {
               </Grid>
             </Grid>
             <div className="pt3 center">
-              <Link href="/" className={styles.gift_link}>
-                View More
+              <Link href="/">
+                <MUILink variant="body1" className={styles.gift_link}>
+                  View More
+                </MUILink>
               </Link>
             </div>
           </Container>
