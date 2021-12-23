@@ -70,7 +70,7 @@ const Landing = () => {
 
         <div className={styles.shop}>
           <Typography className={styles.shopname} variant="h6">
-            <Link href="/" className={styles.shopname}>
+            <Link href="/">
               {NAME}
             </Link>
           </Typography>
