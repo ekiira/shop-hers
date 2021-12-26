@@ -28,12 +28,13 @@
   transform: translate(-50%);
 }
 
-.shopname a {
+.shopname {
   font-size: 3.75rem;
   color: white;
   font-weight: 500;
   white-space: nowrap;
   text-decoration: none;
+  margin-top: 0;
 }
 
 .bto {
@@ -42,24 +43,21 @@
   left: 50%;
   transform: translate(-50%);
 }
+.button {
+  color: $primaryColor;
+  font-size: 1.5625rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  background-color: white;
+  border: 2px solid $primaryColor;
+  border-radius: 0;
+  width: 9.375rem;
+  height: 3.125rem;
 
-.bto {
-  button {
-    color: $primaryColor;
-    font-size: 1.5625rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    background-color: white;
+  &:hover {
+    color: white;
+    background-color: $primaryColor;
     border: 2px solid $primaryColor;
-    border-radius: 0;
-    width: 9.375rem;
-    height: 3.125rem;
-
-    &:hover {
-      color: white;
-      background-color: $primaryColor;
-      border: 2px solid $primaryColor;
-    }
   }
 }
 

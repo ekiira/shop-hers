@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 
 import { NAME } from "../utils/variables";
@@ -69,15 +68,15 @@ const Landing = () => {
         </div>
 
         <div className={styles.shop}>
-          <Typography className={styles.shopname} variant="h6">
-            <Link href="/">
+          <Link href="/">
+            <p className={styles.shopname}>
               {NAME}
-            </Link>
-          </Typography>
+            </p>
+          </Link>
         </div>
         <div className={styles.bto}>
-          <Link href="/shop">
-            <Button>Shop</Button>
+          <Link href="/shop" passHref>
+            <button className={styles.button} role='link'>Shop</button>
           </Link>
         </div>
       </div>
