@@ -76,7 +76,7 @@ const Landing = () => {
         </div>
         <div className={styles.bto}>
           <Link href="/shop" passHref>
-            <Button>Shop</Button>
+            <button className={styles.button} role='link'>Shop</button>
           </Link>
         </div>
       </div>
