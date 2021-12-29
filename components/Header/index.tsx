@@ -165,7 +165,7 @@ const Header = ({ isOpen, setIsOpen }) => {
   };
   return (
     <>
-      <div>
+      <div title="header">
         <AppBar position="static">
           <Toolbar className={classes.toolbar}>
             <IconButton

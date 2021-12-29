@@ -29,9 +29,7 @@ const NewIn = () => {
           <Grid container spacing={2}>
             <Grid item xs={6} md={3} className="pt4">
               <div className={styles.category_content}>
-                <Link href="/shop/shoes">
-                  <div className={styles.image_overlay}></div>
-                </Link>
+                <div className={styles.image_overlay}></div>
                 <div className="relative">
                   <Image
                     src="/images/shoes/airforce.jpeg"
@@ -42,16 +40,16 @@ const NewIn = () => {
                 <div
                   className={`${styles.category_details} ${styles.fadeIn_top}`}
                 >
-                  <p>Shop Shoes</p>
+                  <Link href="/shop/shoes" passHref>
+                    <span role="link">Shop Shoes</span>
+                  </Link>
                 </div>
               </div>
             </Grid>
 
             <Grid item xs={6} md={3} className="pt4">
               <div className={styles.category_content}>
-                <Link href="/shop/clothing">
-                  <div className={styles.image_overlay}></div>
-                </Link>
+                <div className={styles.image_overlay}></div>
                 <div className="relative">
                   <Image
                     src="/images/clothing/shirt1.jpeg"
@@ -62,7 +60,9 @@ const NewIn = () => {
                 <div
                   className={`${styles.category_details} ${styles.fadeIn_top}`}
                 >
-                  <p>Shop Clothing</p>
+                  <Link href="/shop/clothing" passHref>
+                    <span role="link">Shop Clothing</span>
+                  </Link>
                 </div>
               </div>
             </Grid>
@@ -79,23 +79,25 @@ const NewIn = () => {
                 <div
                   className={`${styles.category_details} ${styles.fadeIn_top}`}
                 >
-                  <p>Shop Bags</p>
+                  <Link href="/shop/bags" passHref>
+                    <span role="link">Shop Bags</span>
+                  </Link>
                 </div>
               </div>
             </Grid>
 
             <Grid item xs={6} md={3} className="pt4">
               <div className={styles.category_content}>
-                <Link href="/shop/hats">
-                  <div className={styles.image_overlay}></div>
-                </Link>
+                <div className={styles.image_overlay}></div>
                 <div className="relative">
                   <Image src="/images/hats/hat3.jpeg" alt="hat" layout="fill" />
                 </div>
                 <div
                   className={`${styles.category_details} ${styles.fadeIn_top}`}
                 >
-                  <p>Shop Hats</p>
+                  <Link href="/shop/hats" passHref>
+                    <span role="link">Shop Hats</span>
+                  </Link>
                 </div>
               </div>
             </Grid>
