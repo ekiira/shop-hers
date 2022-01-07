@@ -27,8 +27,6 @@ const Landing = () => {
                   src="/images/her1.jpeg"
                   layout="fill"
                   alt="model"
-                  placeholder="blur"
-                  blurDataURL="/images/her1.jpeg"
                 />
               </div>
             </Grid>
@@ -38,8 +36,6 @@ const Landing = () => {
                   src="/images/her2.jpeg"
                   layout="fill"
                   alt="model"
-                  placeholder="blur"
-                  blurDataURL="/images/her2.jpeg"
                 />
               </div>
             </Grid>
@@ -49,8 +45,6 @@ const Landing = () => {
                   src="/images/her3.jpeg"
                   layout="fill"
                   alt="model"
-                  placeholder="blur"
-                  blurDataURL="/images/her3.jpeg"
                 />
               </div>
             </Grid>
